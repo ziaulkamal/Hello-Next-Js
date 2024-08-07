@@ -1,0 +1,73 @@
+/* 4.07 - Portfolio - Start
+================================================== */
+.portfolio_block {
+	overflow: hidden;
+	transition: var(--bs-transition);
+	background-color: var(--bs-white);
+	border-radius: var(--bs-border-radius-sm);
+	box-shadow: 0 1px 2px 0 rgba(174, 191, 210, 0.30);
+	.portfolio_image_wrap {
+		display: block;
+		overflow: hidden;
+	}
+	.portfolio_content {
+		position: relative;
+		padding: 25px 30px 28px;
+	}
+	.portfolio_title {
+		font-size: 26px;
+		line-height: 36px;
+		margin-bottom: 7px;
+		a {
+			color: var(--bs-dark);
+			&:hover {
+				color: var(--bs-primary);
+			}
+		}
+	}
+
+	.category_list {
+		gap: 30px;
+		i {
+			margin-right: 2px;
+			color: var(--bs-primary);
+		}
+	}
+
+	.btn {
+		top: 26px;
+		right: 30px;
+		position: absolute;
+	}
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 20px 30px 0 rgba(174, 191, 210, 0.30);
+	}
+}
+
+// Portfolio Layout 2
+.portfolio_block.portfolio_layout_2 {
+	padding: 20px;
+	.portfolio_image_wrap {
+		border-radius: var(--bs-border-radius-sm);
+		img {
+			transition: var(--bs-transition);
+		}
+		&:hover {
+			img {
+				transform: scale(1.08);
+			}
+		}
+	}
+	.portfolio_content {
+		display: flex;
+		padding: 38px 40px 20px 20px;
+		flex-direction: column-reverse;
+	}
+	.portfolio_title {
+		margin: 21px 0 0;
+	}
+}
+/* 4.07 - Portfolio - End
+================================================== */
