@@ -13,7 +13,7 @@
 /.next/
 /out/
 /src/app/api/test
-.package-lock.json
+package-lock.json
 # production
 /build
 
