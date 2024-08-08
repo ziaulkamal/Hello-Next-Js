@@ -809,7 +809,7 @@ const StackTechnology = () => {
                     <div className="review_block_2">
                       <h3 className="review_title">“Amazing software services”</h3>
                       <p className="review_commtent">
-                        The solutions they&apos;re providing is helping our business run more smoothly. We've
+                        The solutions they&apos;re providing is helping our business run more smoothly. We&apos;ve
                         been able to make quick developments with them, meeting our product vision
                         within the timeline we set up. Listen to them because they can give strong
                         advice about how to build good products.
@@ -842,7 +842,7 @@ const StackTechnology = () => {
                     <div className="review_block_2">
                       <h3 className="review_title">“Amazing software services”</h3>
                       <p className="review_commtent">
-                        The solutions they&apos;re providing is helping our business run more smoothly. We've
+                        The solutions they&apos;re providing is helping our business run more smoothly. We&apos;ve
                         been able to make quick developments with them, meeting our product vision
                         within the timeline we set up. Listen to them because they can give strong
                         advice about how to build good products.
@@ -875,7 +875,7 @@ const StackTechnology = () => {
                     <div className="review_block_2">
                       <h3 className="review_title">“Amazing software services”</h3>
                       <p className="review_commtent">
-                        The solutions they&apos;re providing is helping our business run more smoothly. We've
+                        The solutions they&apos;re providing is helping our business run more smoothly. We&apos;ve
                         been able to make quick developments with them, meeting our product vision
                         within the timeline we set up. Listen to them because they can give strong
                         advice about how to build good products.
