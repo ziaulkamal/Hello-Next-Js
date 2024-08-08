@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const FAQSection = () => {
   return (
     <section className="faq_section section_decoration">
@@ -469,10 +471,10 @@ const FAQSection = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <img src="/images/shapes/shape_space_4.svg" alt="Techco Shape"/>
+        <Image width={1636} height={49}  src="/images/shapes/shape_space_4.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <img src="/images/shapes/shape_angle_3.webp" alt="Techco Shape Angle"/>
+        <Image width={265} height={270}  src="/images/shapes/shape_angle_3.webp" alt="Techco Shape Angle"/>
       </div>
     </section>
   );

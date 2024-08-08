@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const StackTechnology = () => {
   return (
     <section
@@ -254,7 +256,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_php.svg" alt="PHP SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_php.svg" alt="PHP SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">PHP</h3>
@@ -264,7 +266,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_javascript.svg" alt="JavaScript SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_javascript.svg" alt="JavaScript SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">JavaScript</h3>
@@ -274,7 +276,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/case/icon_elephent.svg" alt="PostgreSQL SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/case/icon_elephent.svg" alt="PostgreSQL SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">PostgreSQL</h3>
@@ -284,7 +286,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Swift</h3>
@@ -294,7 +296,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Typescript</h3>
@@ -304,7 +306,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Python</h3>
@@ -314,7 +316,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">G318</h3>
@@ -324,7 +326,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Java</h3>
@@ -334,7 +336,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Ruby</h3>
@@ -344,7 +346,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">C++</h3>
@@ -354,7 +356,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">React Js</h3>
@@ -364,7 +366,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Laraval</h3>
@@ -378,7 +380,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/case/icon_elephent.svg" alt="PostgreSQL SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/case/icon_elephent.svg" alt="PostgreSQL SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">PostgreSQL</h3>
@@ -388,7 +390,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Swift</h3>
@@ -398,7 +400,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Typescript</h3>
@@ -408,7 +410,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Python</h3>
@@ -418,7 +420,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">G318</h3>
@@ -428,7 +430,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Java</h3>
@@ -438,7 +440,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Ruby</h3>
@@ -448,7 +450,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">C++</h3>
@@ -458,7 +460,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">React Js</h3>
@@ -468,7 +470,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Laraval</h3>
@@ -482,7 +484,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Swift</h3>
@@ -492,7 +494,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Typescript</h3>
@@ -502,7 +504,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Python</h3>
@@ -512,7 +514,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">G318</h3>
@@ -522,7 +524,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Java</h3>
@@ -532,7 +534,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Ruby</h3>
@@ -542,7 +544,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">C++</h3>
@@ -552,7 +554,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">React Js</h3>
@@ -562,7 +564,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Laraval</h3>
@@ -576,7 +578,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Typescript</h3>
@@ -586,7 +588,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Python</h3>
@@ -596,7 +598,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">G318</h3>
@@ -606,7 +608,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Java</h3>
@@ -616,7 +618,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Ruby</h3>
@@ -626,7 +628,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">C++</h3>
@@ -636,7 +638,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">React Js</h3>
@@ -646,7 +648,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Laraval</h3>
@@ -660,7 +662,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Python</h3>
@@ -670,7 +672,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">G318</h3>
@@ -680,7 +682,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Java</h3>
@@ -690,7 +692,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Ruby</h3>
@@ -700,7 +702,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">C++</h3>
@@ -710,7 +712,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">React Js</h3>
@@ -720,7 +722,7 @@ const StackTechnology = () => {
                   <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                     <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                       <div className="iconbox_icon">
-                        <img src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
+                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
                       </div>
                       <div className="iconbox_content">
                         <h3 className="iconbox_title mb-0">Laraval</h3>
@@ -743,7 +745,7 @@ const StackTechnology = () => {
                 <div className="col-6">
                   <div className="review_short_info">
                     <div className="icon">
-                      <img src="/images/icons/icon_c.svg" alt="C SVG Icon"/>
+                      <Image width={39} height={39}  src="/images/icons/icon_c.svg" alt="C SVG Icon"/>
                     </div>
                     <ul className="rating_block unordered_list">
                       <li>
@@ -772,7 +774,7 @@ const StackTechnology = () => {
                 <div className="col-6">
                   <div className="review_short_info">
                     <div className="icon">
-                      <img src="/images/icons/icon_g2.svg" alt="C SVG Icon"/>
+                      <Image width={39} height={39}  src="/images/icons/icon_g2.svg" alt="C SVG Icon"/>
                     </div>
                     <ul className="rating_block unordered_list">
                       <li>
@@ -817,7 +819,7 @@ const StackTechnology = () => {
                       <div className="d-md-flex justify-content-md-between">
                         <div className="review_admin">
                           <div className="review_admin_image">
-                            <img src="/images/avatar/avatar_5.webp" alt="Maverick Phoenix"/>
+                            <Image width={39} height={39}  src="/images/avatar/avatar_5.webp" alt="Maverick Phoenix"/>
                           </div>
                           <div className="review_admin_info">
                             <h4 className="review_admin_name">Maverick Phoenix</h4>
@@ -826,14 +828,14 @@ const StackTechnology = () => {
                             </span>
                             <div className="review_admin_country">
                               <span className="country_flag">
-                                <img src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
+                                <Image width={39} height={39}  src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
                               </span>
                               <span className="country_text">Seattle, Ukraine</span>
                             </div>
                           </div>
                         </div>
                         <div className="review_admin_logo">
-                          <img src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
+                          <Image width={39} height={39}  src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
                         </div>
                       </div>
                     </div>
@@ -850,7 +852,7 @@ const StackTechnology = () => {
                       <div className="d-md-flex justify-content-md-between">
                         <div className="review_admin">
                           <div className="review_admin_image">
-                            <img src="/images/avatar/avatar_6.webp" alt="Maverick Phoenix"/>
+                            <Image width={39} height={39}  src="/images/avatar/avatar_6.webp" alt="Maverick Phoenix"/>
                           </div>
                           <div className="review_admin_info">
                             <h4 className="review_admin_name">Maverick Phoenix</h4>
@@ -859,14 +861,14 @@ const StackTechnology = () => {
                             </span>
                             <div className="review_admin_country">
                               <span className="country_flag">
-                                <img src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
+                                <Image width={39} height={39}  src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
                               </span>
                               <span className="country_text">Seattle, Ukraine</span>
                             </div>
                           </div>
                         </div>
                         <div className="review_admin_logo">
-                          <img src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
+                          <Image width={39} height={39}  src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
                         </div>
                       </div>
                     </div>
@@ -883,7 +885,7 @@ const StackTechnology = () => {
                       <div className="d-md-flex justify-content-md-between">
                         <div className="review_admin">
                           <div className="review_admin_image">
-                            <img src="/images/avatar/avatar_7.webp" alt="Maverick Phoenix"/>
+                            <Image width={39} height={39}  src="/images/avatar/avatar_7.webp" alt="Maverick Phoenix"/>
                           </div>
                           <div className="review_admin_info">
                             <h4 className="review_admin_name">Maverick Phoenix</h4>
@@ -892,14 +894,14 @@ const StackTechnology = () => {
                             </span>
                             <div className="review_admin_country">
                               <span className="country_flag">
-                                <img src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
+                                <Image width={39} height={39}  src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
                               </span>
                               <span className="country_text">Seattle, Ukraine</span>
                             </div>
                           </div>
                         </div>
                         <div className="review_admin_logo">
-                          <img src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
+                          <Image width={39} height={39}  src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
                         </div>
                       </div>
                     </div>
@@ -919,16 +921,16 @@ const StackTechnology = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <img src="/images/shapes/shape_line_2.svg" alt="Techco Shape"/>
+        <Image width={39} height={39}  src="/images/shapes/shape_line_2.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <img src="/images/shapes/shape_line_3.svg" alt="Techco Shape"/>
+        <Image width={39} height={39}  src="/images/shapes/shape_line_3.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_3">
-        <img src="/images/shapes/shape_line_4.svg" alt="Techco Shape"/>
+        <Image width={39} height={39}  src="/images/shapes/shape_line_4.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_4">
-        <img src="/images/shapes/shape_space_3.svg" alt="Techco Shape"/>
+        <Image width={39} height={39}  src="/images/shapes/shape_space_3.svg" alt="Techco Shape"/>
       </div>
     </section>
 

@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-
 const ServiceSection = () => {
   return (
     <section
@@ -23,7 +23,7 @@ const ServiceSection = () => {
           <div className="col-lg-4">
             <div className="service_block_2">
               <div className="service_icon">
-                <img src="/images/icons/icon_code.svg" alt="Techco - Service icon"/>
+                <Image width={62} height={62}  src="/images/icons/icon_code.svg" alt="Techco - Service icon"/>
               </div>
               <h3 className="service_title">
                 <Link href="service_details.html">Custom Software Development</Link>
@@ -63,7 +63,7 @@ const ServiceSection = () => {
           <div className="col-lg-4">
             <div className="service_block_2">
               <div className="service_icon">
-                <img
+                <Image width={62} height={63} 
                   src="/images/icons/icon_programming_tree.svg"
                   alt="Techco - Service icon"/>
               </div>
@@ -109,7 +109,7 @@ const ServiceSection = () => {
           <div className="col-lg-4">
             <div className="service_block_2">
               <div className="service_icon">
-                <img src="/images/icons/icon_monitor_2.svg" alt="Techco - Service icon"/>
+                <Image width={58} height={56}  src="/images/icons/icon_monitor_2.svg" alt="Techco - Service icon"/>
               </div>
               <h3 className="service_title">
                 <Link href="service_details.html">
@@ -153,7 +153,7 @@ const ServiceSection = () => {
           <div className="col-lg-4">
             <div className="service_block_2">
               <div className="service_icon">
-                <img src="/images/icons/icon_phone.svg" alt="Techco - Service icon"/>
+                <Image width={41} height={62}  src="/images/icons/icon_phone.svg" alt="Techco - Service icon"/>
               </div>
               <h3 className="service_title">
                 <Link href="service_details.html">Mobile App Design and Development</Link>
@@ -197,7 +197,7 @@ const ServiceSection = () => {
           <div className="col-lg-4">
             <div className="service_block_2">
               <div className="service_icon">
-                <img src="/images/icons/icon_bug.svg" alt="Techco - Service icon"/>
+                <Image width={62} height={62}  src="/images/icons/icon_bug.svg" alt="Techco - Service icon"/>
               </div>
               <h3 className="service_title">
                 <Link href="service_details.html">Best UI/UX Design Services</Link>
@@ -237,7 +237,7 @@ const ServiceSection = () => {
           <div className="col-lg-4">
             <div className="service_block_2">
               <div className="service_icon">
-                <img
+                <Image width={74} height={63} 
                   src="/images/icons/icon_programming.svg"
                   alt="Techco - Service icon"/>
               </div>
@@ -275,19 +275,19 @@ const ServiceSection = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <img src="/images/shapes/shape_line_5.svg" alt="Techco Shape"/>
+        <Image width={190} height={609}  src="/images/shapes/shape_line_5.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <img src="/images/shapes/shape_line_6.svg" alt="Techco Shape"/>
+        <Image width={270} height={201}  src="/images/shapes/shape_line_6.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_3">
-        <img src="/images/shapes/shape_space_1.svg" alt="Techco Shape"/>
+        <Image width={1636} height={49}  src="/images/shapes/shape_space_1.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_4">
-        <img src="/images/shapes/shape_angle_1.webp" alt="Techco Shape Angle"/>
+        <Image width={265} height={364}  src="/images/shapes/shape_angle_1.webp" alt="Techco Shape Angle"/>
       </div>
       <div className="decoration_item shape_image_5">
-        <img src="/images/shapes/shape_angle_2.webp" alt="Techco Shape Angle"/>
+        <Image width={265} height={269}  src="/images/shapes/shape_angle_2.webp" alt="Techco Shape Angle"/>
       </div>
     </section>
 

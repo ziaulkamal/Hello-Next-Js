@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Heads = () => {
@@ -9,12 +10,19 @@ const Heads = () => {
             <div className="col-lg-3 col-5">
               <div className="site_logo">
                 <Link className="site_link" href="index.html">
-                  <img
+                  <Image
+                  
                     src="/images/site_logo/site_logo_2.svg"
-                    alt="Site Logo – Techco – IT Solutions & Technology, Business Consulting, Software Company Site Template"/>
-                  <img
+                    alt="Site Logo – Techco – IT Solutions & Technology, Business Consulting, Software Company Site Template"
+                    width={124}
+                    height={46}
+                    />
+                  <Image
                     src="/images/site_logo/site_logo_3.svg"
-                    alt="Site Logo – Techco – IT Solutions & Technology, Business Consulting, Software Company Site Template"/>
+                    alt="Site Logo – Techco – IT Solutions & Technology, Business Consulting, Software Company Site Template"
+                    width={137}
+                    height={51}
+                    />
                 </Link>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -55,32 +56,32 @@ const HeroSection = () => {
           <div className="col-lg-6">
             <div className="engine_image">
               <div className="image_wrap_1">
-                <img src="/images/hero/circle_engine_1.webp" alt="Engine Image"/>
+                <Image width={153} height={153} src="/images/hero/circle_engine_1.webp" alt="Engine Image"/>
               </div>
               <div className="image_wrap_2">
-                <img src="/images/hero/circle_engine_2.webp" alt="Engine Image"/>
+                <Image width={448} height={448} src="/images/hero/circle_engine_2.webp" alt="Engine Image"/>
               </div>
               <div className="image_wrap_3">
-                <img src="/images/hero/circle_engine_3.webp" alt="Engine Image"/>
+                <Image width={566} height={566} src="/images/hero/circle_engine_3.webp" alt="Engine Image"/>
               </div>
               <div className="image_wrap_4">
-                <img src="/images/hero/circle_engine_4.png" alt="Engine Image"/>
+                <Image width={695} height={656} src="/images/hero/circle_engine_4.png" alt="Engine Image"/>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="shape_image_1">
-        <img src="/images/hero/shape_image_1.webp" alt="Engine Image"/>
+        <Image src="/images/hero/shape_image_1.webp" width={1130} height={72} alt="Engine Image"/>
       </div>
       <div className="shape_image_2">
-        <img src="/images/hero/shape_image_2.webp" alt="Engine Image"/>
+        <Image src="/images/hero/shape_image_2.webp" width={1130} height={116} alt="Engine Image"/>
       </div>
       <div className="shape_image_3">
-        <img src="/images/hero/shape_image_3.webp" alt="Engine Image"/>
+        <Image src="/images/hero/shape_image_3.webp" width={328} height={179} alt="Engine Image"/>
       </div>
       <div className="shape_image_4">
-        <img src="/images/hero/shape_image_4.webp" alt="Engine Image"/>
+        <Image src="/images/hero/shape_image_4.webp" width={328} height={179} alt="Engine Image"/>
       </div>
     </section>
 

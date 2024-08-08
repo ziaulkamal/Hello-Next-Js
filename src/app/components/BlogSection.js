@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const BlogSection = () => {
@@ -22,7 +23,7 @@ const BlogSection = () => {
             <div className="blog_post_block layout_2">
               <div className="blog_post_image">
                 <Link className="image_wrap" href="blog_details.html">
-                  <img src="/images/blog/blog_post_image_12.webp" alt="Blog Post Image 1"/>
+                  <Image width={410} height={326}  src="/images/blog/blog_post_image_12.webp" alt="Blog Post Image 1"/>
                   <i className="fa-solid fa-arrow-up-right"/>
                 </Link>
               </div>
@@ -42,7 +43,7 @@ const BlogSection = () => {
                   </li>
                   <li>
                     <Link href="#!">
-                      <img src="/images/icons/icon_calendar.svg" alt="Icon Calendar"/>{" "}
+                      <Image width={18} height={16} src="/images/icons/icon_calendar.svg" alt="Icon Calendar"/>{" "}
                       11/12/2024
                     </Link>
                   </li>
@@ -60,7 +61,7 @@ const BlogSection = () => {
             <div className="blog_post_block layout_2">
               <div className="blog_post_image">
                 <Link className="image_wrap" href="blog_details.html">
-                  <img src="/images/blog/blog_post_image_13.webp" alt="Blog Post Image 1"/>
+                  <Image width={410} height={326} src="/images/blog/blog_post_image_13.webp" alt="Blog Post Image 1"/>
                   <i className="fa-solid fa-arrow-up-right"/>
                 </Link>
               </div>
@@ -80,7 +81,7 @@ const BlogSection = () => {
                   </li>
                   <li>
                     <Link href="#!">
-                      <img src="/images/icons/icon_calendar.svg" alt="Icon Calendar"/>{" "}
+                      <Image width={18} height={16} src="/images/icons/icon_calendar.svg" alt="Icon Calendar"/>{" "}
                       11/12/2024
                     </Link>
                   </li>
@@ -98,7 +99,7 @@ const BlogSection = () => {
             <div className="blog_post_block layout_2">
               <div className="blog_post_image">
                 <Link className="image_wrap" href="blog_details.html">
-                  <img src="/images/blog/blog_post_image_14.webp" alt="Blog Post Image 1"/>
+                  <Image width={410} height={326} src="/images/blog/blog_post_image_14.webp" alt="Blog Post Image 1"/>
                   <i className="fa-solid fa-arrow-up-right"/>
                 </Link>
               </div>
@@ -118,7 +119,7 @@ const BlogSection = () => {
                   </li>
                   <li>
                     <Link href="#!">
-                      <img src="/images/icons/icon_calendar.svg" alt="Icon Calendar"/>{" "}
+                      <Image width={18} height={16} src="/images/icons/icon_calendar.svg" alt="Icon Calendar"/>{" "}
                       11/12/2024
                     </Link>
                   </li>
@@ -135,10 +136,10 @@ const BlogSection = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <img src="/images/shapes/shape_line_7.svg" alt="Techco Shape"/>
+        <Image width={204} height={337}  src="/images/shapes/shape_line_7.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <img src="/images/shapes/shape_angle_4.webp" alt="Techco Shape Angle"/>
+        <Image width={265} height={363}  src="/images/shapes/shape_angle_4.webp" alt="Techco Shape Angle"/>
       </div>
     </section>
 

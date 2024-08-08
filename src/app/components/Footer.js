@@ -1,13 +1,14 @@
 // src/app/components/Footer.js
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const Footer = () => {
   return (
     <footer className="site_footer footer_layout_2 section_decoration" style={{ backgroundImage: "url('/images/shapes/bg_pattern_3.svg')" }}>
       <div className="decoration_item shape_image_1">
-        <img src="/images/shapes/shape_space_2.svg" alt="Techco Shape" />
+        <Image width={1371} height={49}  src="/images/shapes/shape_space_2.svg" alt="Techco Shape" />
       </div>
       <div className="container">
         <div className="footer_main_content">
@@ -57,7 +58,7 @@ const Footer = () => {
                 <p>Sign up to Techco weekly newsletter to get the latest updates.</p>
                 <form className="footer_newslatter_2" action="#">
                   <label htmlFor="footer_mail_input">
-                    <img src="/images/icons/icon_mail_2.svg" alt="Mail SVG Icon" />
+                    <Image width={18} height={16}  src="/images/icons/icon_mail_2.svg" alt="Mail SVG Icon" />
                   </label>
                   <input id="footer_mail_input" type="email" name="email" placeholder="Enter your email" />
                   <button type="submit">Send</button>

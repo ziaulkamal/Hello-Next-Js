@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const CTASection = () => {
   return (
     <section className="contact_section pb-80 bg-light section_decoration">
@@ -156,13 +158,13 @@ const CTASection = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <img src="/images/shapes/shape_line_5.svg" alt="Techco Shape"/>
+        <Image width={192} height={616}  src="/images/shapes/shape_line_5.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <img src="/images/shapes/shape_line_6.svg" alt="Techco Shape"/>
+        <Image width={298} height={222}  src="/images/shapes/shape_line_6.svg" alt="Techco Shape"/>
       </div>
       <div className="decoration_item shape_image_3">
-        <img src="/images/shapes/shape_space_5.svg" alt="Techco Shape"/>
+        <Image width={1371} height={49}  src="/images/shapes/shape_space_5.svg" alt="Techco Shape"/>
       </div>
     </section>
 
