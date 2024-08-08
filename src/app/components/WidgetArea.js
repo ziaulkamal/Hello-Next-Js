@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const WidgetArea = () => {
   return (
     <div className="col-lg-4">
@@ -13,7 +15,7 @@ const WidgetArea = () => {
               placeholder="Search your keyword"
               type="search"/>
             <button type="submit">
-              <img alt="Search Icon" src="/images/icons/icon_search.svg"/>
+              <Image width={16} height={16} alt="Search Icon" src="/images/icons/icon_search.svg"/>
             </button>
           </div>
         </div>
