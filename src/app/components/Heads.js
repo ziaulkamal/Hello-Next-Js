@@ -78,7 +78,7 @@ const Heads = () => {
                                     <Link className="iconbox_block_2" href="about.html">
                                       <span className="icon_title_wrap">
                                         <small className="iconbox_icon">
-                                          <img src="/images/icons/icon_wifi.svg" alt="Wifi SVG Icon"/>
+                                          <Image width={16} height={16}  src="/images/icons/icon_wifi.svg" alt="Wifi SVG Icon"/>
                                         </small>
                                         <small className="iconbox_title">
                                           About Us
@@ -93,7 +93,7 @@ const Heads = () => {
                                     <Link className="iconbox_block_2" href="pricing.html">
                                       <span className="icon_title_wrap">
                                         <small className="iconbox_icon">
-                                          <img src="/images/icons/icon_dollar_2.svg" alt="Dollar SVG Icon"/>
+                                          <Image width={16} height={16}  src="/images/icons/icon_dollar_2.svg" alt="Dollar SVG Icon"/>
                                         </small>
                                         <small className="iconbox_title">
                                           Our Pricing
@@ -108,7 +108,7 @@ const Heads = () => {
                                     <Link className="iconbox_block_2" href="portfolio.html">
                                       <span className="icon_title_wrap">
                                         <small className="iconbox_icon">
-                                          <img src="/images/icons/icon_chart.svg" alt="Chart SVG Icon"/>
+                                          <Image width={16} height={16}  src="/images/icons/icon_chart.svg" alt="Chart SVG Icon"/>
                                         </small>
                                         <small className="iconbox_title">
                                           Portfolio
@@ -123,7 +123,7 @@ const Heads = () => {
                                     <Link className="iconbox_block_2" href="portfolio_details.html">
                                       <span className="icon_title_wrap">
                                         <small className="iconbox_icon">
-                                          <img src="/images/icons/icon_tag_2.svg" alt="Event Tag SVG Icon"/>
+                                          <Image width={16} height={16}  src="/images/icons/icon_tag_2.svg" alt="Event Tag SVG Icon"/>
                                         </small>
                                         <small className="iconbox_title">
                                           Portfolio Details
@@ -138,7 +138,7 @@ const Heads = () => {
                                     <Link className="iconbox_block_2" href="team.html">
                                       <span className="icon_title_wrap">
                                         <small className="iconbox_icon">
-                                          <img src="/images/icons/icon_user_2.svg" alt="User Check SVG Icon"/>
+                                          <Image width={16} height={16}  src="/images/icons/icon_user_2.svg" alt="User Check SVG Icon"/>
                                         </small>
                                         <small className="iconbox_title">
                                           Team
@@ -153,7 +153,7 @@ const Heads = () => {
                                     <Link className="iconbox_block_2" href="team_details.html">
                                       <span className="icon_title_wrap">
                                         <small className="iconbox_icon">
-                                          <img src="/images/icons/icon_users.svg" alt="Users SVG Icon"/>
+                                          <Image width={16} height={16}  src="/images/icons/icon_users.svg" alt="Users SVG Icon"/>
                                         </small>
                                         <small className="iconbox_title">
                                           Team Details
@@ -168,7 +168,7 @@ const Heads = () => {
                                     <Link className="iconbox_block_2" href="service.html">
                                       <span className="icon_title_wrap">
                                         <small className="iconbox_icon">
-                                          <img src="/images/icons/icon_pen.svg" alt="Pen SVG Icon"/>
+                                          <Image width={16} height={16}  src="/images/icons/icon_pen.svg" alt="Pen SVG Icon"/>
                                         </small>
                                         <small className="iconbox_title">
                                           Services
@@ -183,7 +183,7 @@ const Heads = () => {
                                     <Link className="iconbox_block_2" href="service_details.html">
                                       <span className="icon_title_wrap">
                                         <small className="iconbox_icon">
-                                          <img src="/images/icons/icon_pen.svg" alt="Pen SVG Icon"/>
+                                          <Image width={16} height={16}  src="/images/icons/icon_pen.svg" alt="Pen SVG Icon"/>
                                         </small>
                                         <small className="iconbox_title">
                                           Service Details
@@ -210,7 +210,7 @@ const Heads = () => {
                                 <li>
                                   <div className="review_short_info_2">
                                     <div className="review_admin_logo">
-                                      <img src="/images/clients/client_logo_9.webp" alt="Client Logo"/>
+                                      <Image width={288} height={83}  src="/images/clients/client_logo_9.webp" alt="Client Logo"/>
                                     </div>
                                     <div className="review_info_content">
                                       <ul className="rating_block unordered_list">
@@ -241,7 +241,7 @@ const Heads = () => {
                                 <li>
                                   <div className="review_short_info_2">
                                     <div className="review_admin_logo">
-                                      <img src="/images/clients/client_logo_10.webp" alt="Client Logo"/>
+                                      <Image width={336} height={77}  src="/images/clients/client_logo_10.webp" alt="Client Logo"/>
                                     </div>
                                     <div className="review_info_content">
                                       <ul className="rating_block unordered_list">
@@ -275,7 +275,7 @@ const Heads = () => {
                               <div className="site_author bg-primary">
                                 <div className="author_box">
                                   <div className="author_image bg-light">
-                                    <img src="/images/avatar/avatar_7.webp" alt="Site Author Image"/>
+                                    <Image width={1320} height={1520}  src="/images/avatar/avatar_7.webp" alt="Site Author Image"/>
                                   </div>
                                   <div className="author_box_content">
                                     <h3 className="author_name text-white">
@@ -286,7 +286,7 @@ const Heads = () => {
                                     </span>
                                   </div>
                                   <div className="quote_icon">
-                                    <img src="/images/icons/icon_quote.svg" alt="Quote Icon"/>
+                                    <Image width={120} height={98}  src="/images/icons/icon_quote.svg" alt="Quote Icon"/>
                                   </div>
                                 </div>
                                 <p className="mb-0 text-white">
@@ -535,7 +535,7 @@ const Heads = () => {
                               <div className="megamenu_case bg-primary">
                                 <h3>Computer Software</h3>
                                 <h4>Astarte Medical</h4>
-                                <img src="/images/case/case_image_4.webp" alt="Case Image"/>
+                                <Image width={277} height={254}  src="/images/case/case_image_4.webp" alt="Case Image"/>
                                 <Link className="btn" href="portfolio.html">
                                   <span className="btn_label" data-text="Read Case">
                                     Read Case
