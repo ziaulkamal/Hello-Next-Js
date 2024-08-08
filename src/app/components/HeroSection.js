@@ -20,7 +20,7 @@ const HeroSection = () => {
                 Their Businesses.
               </h1>
               <p>
-                In today's rapidly evolving digital landscape, staying ahead of the curve is
+                In today&apos;s rapidly evolving digital landscape, staying ahead of the curve is
                 essential for businesses aiming to thrive and succeed.
               </p>
               <ul className="step_list text-white unordered_list_block">

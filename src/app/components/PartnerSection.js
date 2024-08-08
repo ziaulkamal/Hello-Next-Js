@@ -2,7 +2,7 @@ const PartnerSection = () => {
   return (
     <div className="feature_partners_section">
       <div className="container position-relative">
-        <div className="title_text text-white">Our Featured Partner's</div>
+        <div className="title_text text-white">Our Featured Partner&apos;s</div>
         <div className="client_logo_carousel">
           <div className="swiper-wrapper">
             <div className="swiper-slide">

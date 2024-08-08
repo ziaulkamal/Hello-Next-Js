@@ -13,7 +13,7 @@ const CTASection = () => {
                 }}>
                   You Are Here
                 </div>
-                <h2 className="heading_text mb-0">Let's Start</h2>
+                <h2 className="heading_text mb-0">Let&apos;s Start</h2>
                 <p className="heading_description mb-0">
                   Initiating Your Journey to Success and Growth.
                 </p>
@@ -68,10 +68,10 @@ const CTASection = () => {
             <div className="instant_contact_form">
               <div className="small_title">
                 <i className="fa-solid fa-envelope-open-text"/>
-                Let's Connect!
+                Let&apos;s Connect!
               </div>
               <h3 className="form_title">
-                Send us a message, and we'll promptly discuss your project with you.
+                Send us a message, and we&apos;ll promptly discuss your project with you.
               </h3>
               <div className="row">
                 <div className="col-md-6">
