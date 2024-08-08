@@ -1,0 +1,16 @@
+[
+  {
+    "section": "articles",
+    "category": "teknologi",
+    "slug": "artikel-terbaru",
+    "title": "Artikel Terbaru di Teknologi",
+    "content": "Ini adalah artikel terbaru di kategori teknologi."
+  },
+  {
+    "section": "pages",
+    "category": "olahraga",
+    "slug": "berita-sepakbola",
+    "title": "Berita Sepakbola",
+    "content": "Ini adalah berita terbaru tentang sepakbola."
+  }
+]

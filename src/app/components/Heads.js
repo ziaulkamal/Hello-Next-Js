@@ -9,7 +9,7 @@ const Heads = () => {
           <div className="row align-items-center">
             <div className="col-lg-3 col-5">
               <div className="site_logo">
-                <Link className="site_link" href="index.html">
+                <Link className="site_link" href={'/'}>
                   <Image
                   
                     src="/images/site_logo/site_logo_2.svg"
@@ -32,29 +32,12 @@ const Heads = () => {
                   className="main_menu_inner collapse navbar-collapse justify-content-lg-center"
                   id="main_menu_dropdown">
                   <ul className="main_menu_list unordered_list justify-content-center">
-                    <li className="dropdown active">
+                    <li>
                       <Link
-                        className="nav-link"
-                        href="#"
-                        id="home_submenu"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                        className=""
+                        href={'/'}>
                         Home
                       </Link>
-                      <ul className="dropdown-menu" aria-labelledby="home_submenu">
-                        <li>
-                          <Link href="index.html">IT Solution</Link>
-                        </li>
-                        <li className="active">
-                          <Link href="index_software_company.html">Software Company</Link>
-                        </li>
-                        <li>
-                          <Link href="index_business_consulting.html">
-                            Business Consulting
-                          </Link>
-                        </li>
-                      </ul>
                     </li>
                     <li className="dropdown">
                       <Link

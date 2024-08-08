@@ -7,7 +7,7 @@ const PartnerSection = () => {
       <div className="container position-relative">
         <div className="title_text text-white">Our Featured Partner&apos;s</div>
         <div className="client_logo_carousel">
-          <div className="swiper-wrapper">
+          {/* <div className="swiper-wrapper">
             <div className="swiper-slide">
               <div className="client_logo_item">
                 <Image
@@ -44,7 +44,7 @@ const PartnerSection = () => {
               </div>
             </div>
 
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

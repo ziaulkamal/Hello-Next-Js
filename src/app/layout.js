@@ -34,7 +34,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={false}>
         <div className="backtotop">
             <Link href="#" className="scroll">
               <i className="fa-solid fa-arrow-up"></i>
