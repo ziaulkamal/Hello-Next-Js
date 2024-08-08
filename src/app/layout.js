@@ -6,7 +6,7 @@ import '../../public/css/swiper-bundle.min.css';
 import '../../public/css/magnific-popup.min.css';
 import '../../public/css/odometer.min.css';
 import '../../public/css/style.css';
-import '../../public/css/style.css';
+// import '../../public/css/style.css';
 import Footer from './components/Footer';
 import MyScript from './components/MyScript';
 
