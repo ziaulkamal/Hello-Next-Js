@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from '@/styles/style.module.css'
 
 const FAQSection = () => {
   return (
@@ -6,10 +7,7 @@ const FAQSection = () => {
       <div className="container">
         <div className="heading_block text-center">
           <div
-            className="heading_focus_text has_underline d-inline-flex"
-            style={{
-            backgroundImage: 'url("/images/shapes/shape_title_under_line.svg")'
-          }}>
+            className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`}>
             F.A.Q.
           </div>
           <h2 className="heading_text mb-0">

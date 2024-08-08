@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from '@/styles/style.module.css'
 
 const StackTechnology = () => {
   return (
@@ -9,10 +10,7 @@ const StackTechnology = () => {
           <div className="col-lg-6">
             <div className="heading_block">
               <div
-                className="heading_focus_text has_underline d-inline-flex"
-                style={{
-                backgroundImage: 'url("/images/shapes/shape_title_under_line.svg")'
-              }}>
+                className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`} >
                 Working Process
               </div>
               <h2 className="heading_text mb-0">
@@ -178,10 +176,7 @@ const StackTechnology = () => {
         <div className="section_space">
           <div className="heading_block text-center">
             <div
-              className="heading_focus_text has_underline d-inline-flex"
-              style={{
-              backgroundImage: 'url("/images/shapes/shape_title_under_line.svg")'
-            }}>
+              className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`} >
               Our Technologies
             </div>
             <h2 className="heading_text mb-0">

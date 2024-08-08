@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import styles from '@/styles/style.module.css';
+
 const BlogSection = () => {
   return (
-    <section className="blog_section blog_section_space section_decoration">
+    <section className={`${styles.headingFocusFrontPage} blog_section blog_section_space section_decoration`}>
       <div className="container">
         <div className="heading_block text-center">
           <div
             className="heading_focus_text has_underline d-inline-flex"
-            style={{
-            backgroundImage: 'url("/images/shapes/shape_title_under_line.svg")'
-          }}>
+            >
             Our Articles
           </div>
           <h2 className="heading_text mb-0">

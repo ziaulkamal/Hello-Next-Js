@@ -24,3 +24,24 @@
   background-position: center; /* Tempatkan gambar di tengah */
   background-repeat: no-repeat; /* Hindari pengulangan gambar */
 }
+
+.headingFocusFrontPage {
+  background-image: url('/images/shapes/shape_title_under_line.svg');
+  background-size: cover; /* Sesuaikan ukuran gambar latar belakang */
+  background-position: center; /* Tempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+}
+
+.about_and_case_section {
+  background-image: url('/images/backgrounds/bg_image_2.webp');
+  background-size: cover; /* Sesuaikan ukuran gambar latar belakang */
+  background-position: center; /* Tempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+}
+
+.about_funfact_info {
+  background-image: url('/images/shapes/shape_bg_1.webp');
+  background-size: cover; /* Sesuaikan ukuran gambar latar belakang */
+  background-position: center; /* Tempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+}

@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import styles from '@/styles/style.module.css'
 const AboutCase = () => {
   return (
     <section
-      className="about_and_case_section section_space section_decoration bg-dark"
-      style={{
-      backgroundImage: 'url("/images/backgrounds/bg_image_2.webp")'
-    }}>
+      className={`${styles.about_and_case_section} about_and_case_section section_space section_decoration bg-dark`}>
       <div className="container">
         <div className="row align-items-center justify-content-lg-between">
           <div className="col-lg-7 order-lg-last">
@@ -16,10 +13,7 @@ const AboutCase = () => {
                 <Image width={198} height={240}  src="/images/about/about_image_6.webp" alt="Techco - About Image"/>
               </div>
               <div
-                className="about_funfact_info"
-                style={{
-                backgroundImage: 'url("/images/shapes/shape_bg_1.webp")'
-              }}>
+                className={`${styles.about_funfact_info} about_funfact_info`} >
                 <div className="customer_count">
                   <ul className="unordered_list">
                     <li>
@@ -78,10 +72,7 @@ const AboutCase = () => {
             <div className="about_content">
               <div className="heading_block mb-0 text-white">
                 <div
-                  className="heading_focus_text has_underline d-inline-flex"
-                  style={{
-                  backgroundImage: 'url("/images/shapes/shape_title_under_line.svg")'
-                }}>
+                  className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`}>
                   About Us
                 </div>
                 <h2 className="heading_text">
@@ -100,10 +91,7 @@ const AboutCase = () => {
         <div className="pt-170">
           <div className="heading_block text-center text-white">
             <div
-              className="heading_focus_text has_underline d-inline-flex"
-              style={{
-              backgroundImage: 'url("/images/shapes/shape_title_under_line.svg")'
-            }}>
+              className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`}>
               Case Studies
             </div>
             <h2 className="heading_text mb-0">

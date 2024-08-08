@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import styles from '@/styles/style.module.css'
 const CTASection = () => {
   return (
     <section className="contact_section pb-80 bg-light section_decoration">
@@ -9,10 +9,7 @@ const CTASection = () => {
             <div className="contact_method_box">
               <div className="heading_block">
                 <div
-                  className="heading_focus_text has_underline d-inline-flex mb-3"
-                  style={{
-                  backgroundImage: 'url("/images/shapes/shape_title_under_line.svg")'
-                }}>
+                  className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex mb-3`} >
                   You Are Here
                 </div>
                 <h2 className="heading_text mb-0">Let&apos;s Start</h2>

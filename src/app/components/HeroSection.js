@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import styles from '@/styles/style.module.css';
+
 const HeroSection = () => {
   return (
     <section className="software_company_hero_section xb-hidden">
@@ -9,10 +11,7 @@ const HeroSection = () => {
           <div className="col-lg-6">
             <div className="content_wrap">
               <div
-                className="heading_focus_text has_underline text-white d-inline-flex"
-                style={{
-                backgroundImage: 'url("/images/shapes/shape_title_under_line.svg")'
-              }}>
+                className={`${styles.headingFocusFrontPage} heading_focus_text has_underline text-white d-inline-flex`}>
                 Perfect Company Solution
               </div>
               <h1 className="text-white">
