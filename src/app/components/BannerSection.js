@@ -1,9 +1,9 @@
+
+import styles from '@/styles/style.module.css';
 const BannerSection = ({ section, title, category }) => {
     return (
         <section
-            className="page_banner_section text-center"
-            style={{ backgroundImage: 'url("/images/shapes/bg_pattern_4.svg")' }}
-        >
+            className={styles.pageBannerSection}>
             <div className="container">
                 <div className="heading_focus_text text-white">
                     {section}

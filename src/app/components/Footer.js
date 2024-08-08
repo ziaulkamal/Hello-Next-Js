@@ -2,11 +2,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import styles from '@/styles/style.module.css'
 
 const Footer = () => {
   return (
-    <footer className="site_footer footer_layout_2 section_decoration" style={{ backgroundImage: "url('/images/shapes/bg_pattern_3.svg')" }}>
+    <footer className={`${styles.siteFooter} site_footer footer_layout_2 section_decoration`}>
       <div className="decoration_item shape_image_1">
         <Image width={1371} height={49}  src="/images/shapes/shape_space_2.svg" alt="Techco Shape" />
       </div>
@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer_bottom" style={{ backgroundImage: "url('/images/shapes/shape_space_6.svg')" }}>
+      <div className={`${styles.siteFooterCopyright} footer_bottom`}>
         <div className="container d-md-flex align-items-md-center justify-content-md-between">
           <p className="copyright_text m-0">
             Copyright © 2024 Techco, All rights reserved.

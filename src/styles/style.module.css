@@ -1,0 +1,26 @@
+/* styles.module.css */
+.pageBannerSection {
+  background-image: url('/images/shapes/bg_pattern_4.svg');
+  z-index: 1;
+  position: relative;
+  padding: 130px 0 110px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--bs-dark);
+  background-position: center center; 
+  text-align: center;
+}
+
+.siteFooter {
+  background-image: url('/images/shapes/bg_pattern_3.svg');
+  background-size: cover; /* Sesuaikan ukuran gambar latar belakang */
+  background-position: center; /* Tempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+}
+
+.siteFooterCopyright {
+  background-image: url('/images/shapes/shape_space_6.svg');
+  background-size: cover; /* Sesuaikan ukuran gambar latar belakang */
+  background-position: center; /* Tempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+}
