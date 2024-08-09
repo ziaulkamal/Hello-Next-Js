@@ -7,7 +7,7 @@ const Heads = () => {
 
   return (
     <header className="site_header site_header_2">
-      <div className="header_bottom stricky">
+      <div className="header_bottom">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-3 col-5">
@@ -111,9 +111,7 @@ const Heads = () => {
                                               ))}
                                             </ul>
                                             <div className="review_counter">
-                                              From
-                                              <b>200+</b>
-                                              reviews
+                                              Lebih <b>200+</b> reviews
                                             </div>
                                           </div>
                                         </div>
@@ -161,7 +159,7 @@ const Heads = () => {
                       </li>
                     ))}
                     <li>
-                      <Link href="contact.html">Contact</Link>
+                      <Link href={'career'}>Karir</Link>
                     </li>
                   </ul>
                 </div>

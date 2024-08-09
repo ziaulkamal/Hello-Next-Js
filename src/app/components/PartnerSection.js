@@ -1,54 +1,29 @@
 import Image from "next/image";
+import clientData from '@/app/data/clientSection.json';  // Pastikan path ini sesuai dengan struktur folder Anda
 
 const PartnerSection = () => {
-  
   return (
     <div className="feature_partners_section">
       <div className="container position-relative">
-        <div className="title_text text-white">Our Featured Partner&apos;s</div>
+        <div className="title_text text-white">{clientData.title}</div>
         <div className="client_logo_carousel">
-          {/* <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <div className="client_logo_item">
-                <Image
-                  width={168} height={70} src="/images/clients/client_logo_1.webp"
-                  alt="- Client Logo Image"/>
+          <div className="swiper-wrapper">
+            {clientData.clients.map((client, index) => (
+              <div className="swiper-slide" key={index}>
+                <div className="client_logo_item">
+                  <Image
+                    width={client.width}
+                    height={client.height}
+                    src={client.src}
+                    alt={client.alt}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="client_logo_item">
-                <Image
-                  width={168} height={70} src="/images/clients/client_logo_2.webp"
-                  alt="- Client Logo Image"/>
-              </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="client_logo_item">
-                <Image
-                  width={168} height={70} src="/images/clients/client_logo_3.webp"
-                  alt="- Client Logo Image"/>
-              </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="client_logo_item">
-                <Image
-                  width={168} height={70} src="/images/clients/client_logo_4.webp"
-                  alt="- Client Logo Image"/>
-              </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="client_logo_item">
-                <Image
-                  width={168} height={70} src="/images/clients/client_logo_5.webp"
-                  alt="- Client Logo Image"/>
-              </div>
-            </div>
-
-          </div> */}
+            ))}
+          </div>
         </div>
       </div>
     </div>
-
   );
 }
 

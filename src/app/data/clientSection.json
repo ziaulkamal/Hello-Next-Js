@@ -1,0 +1,54 @@
+
+{
+  "title": "Client Kami",
+  "clients": [
+    {
+      "src": "/images/clients/client_logo_1.webp",
+      "alt": "- Client Logo Image",
+      "width": 168,
+      "height": 70
+    },
+    {
+      "src": "/images/clients/client_logo_2.webp",
+      "alt": "- Client Logo Image",
+      "width": 168,
+      "height": 70
+    },
+    {
+      "src": "/images/clients/client_logo_3.webp",
+      "alt": "- Client Logo Image",
+      "width": 168,
+      "height": 70
+    },
+    {
+      "src": "/images/clients/client_logo_4.webp",
+      "alt": "- Client Logo Image",
+      "width": 168,
+      "height": 70
+    },
+    {
+      "src": "/images/clients/client_logo_5.webp",
+      "alt": "- Client Logo Image",
+      "width": 168,
+      "height": 70
+    },
+     {
+      "src": "/images/clients/senaleen.png",
+      "alt": "- Client Logo Image",
+      "width": 130,
+      "height": 60
+    },
+     {
+      "src": "/images/clients/aceh-global-news.png",
+      "alt": "- Client Logo Image",
+      "width": 180,
+      "height": 90
+    },
+     {
+      "src": "/images/clients/bmk-abdya.jpg",
+      "alt": "- Client Logo Image",
+      "width": 180,
+      "height": 90
+    }
+  ]
+}

@@ -172,28 +172,28 @@
 
   // Client Logo Carousel - Start
   // --------------------------------------------------
-  // var swiperClientLogo = new Swiper(".client_logo_carousel", {
-  //   loop: true,
-  //   speed: 2000,
-  //   freeMode: true,
-  //   centeredSlides: true,
-  //   allowTouchMove: true,
-  //   autoplay: {
-  //     delay: 1,
-  //     disableOnInteraction: true,
-  //   },
-  //   breakpoints: {
-  //     376: {
-  //       slidesPerView: 2,
-  //     },
-  //     768: {
-  //       slidesPerView: 4,
-  //     },
-  //     1025: {
-  //       slidesPerView: 7,
-  //     },
-  //   },
-  // });
+  var swiperClientLogo = new Swiper(".client_logo_carousel", {
+    loop: true,
+    speed: 2000,
+    freeMode: true,
+    centeredSlides: true,
+    allowTouchMove: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: true,
+    },
+    breakpoints: {
+      376: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1025: {
+        slidesPerView: 7,
+      },
+    },
+  });
   // Client Logo Carousel - End
   // --------------------------------------------------
 

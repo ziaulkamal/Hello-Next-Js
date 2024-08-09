@@ -1,0 +1,139 @@
+{
+  "heading": "Layanan Mindkreativ",
+  "title": "Yang Bisa <mark>Kami</mark> Berikan",
+  "services": [
+    {
+      "icon": {
+        "src": "/images/icons/icon_code.svg",
+        "alt": "- Service icon",
+        "width": 62,
+        "height": 62
+      },
+      "title": "Pembuatan Aplikasi Berbasis Website",
+      "link": "service_details.html",
+      "items": [
+        "Aplikasi Kasir",
+        "Aplikasi Survey Elektronik",
+        "Aplikasi Keuangan",
+        "Aplikasi Manajemen Klinik"
+      ]
+    },
+    {
+      "icon": {
+        "src": "/images/icons/icon_programming_tree.svg",
+        "alt": "- Service icon",
+        "width": 62,
+        "height": 63
+      },
+      "title": "Sarana Konsultasi Terkait Keamanan ",
+      "link": "#!",
+      "items": [
+        "Keamanan Website",
+        "Keamanan Smartphone",
+        "Kemananan Jaringan",
+        "Keamanan Legalitas"
+      ]
+    },
+    {
+      "icon": {
+        "src": "/images/icons/icon_monitor_2.svg",
+        "alt": "- Service icon",
+        "width": 58,
+        "height": 56
+      },
+      "title": "Pembuatan Website Menggunakan CMS",
+      "link": "#!",
+      "items": [
+        "Website Sekolah",
+        "Website E-Commerce",
+        "Website Berita",
+        "Website Branding Personal"
+      ]
+    },
+    {
+      "icon": {
+        "src": "/images/icons/icon_phone.svg",
+        "alt": "- Service icon",
+        "width": 41,
+        "height": 62
+      },
+      "title": "Optimasi Sosial Media & Branding",
+      "link": "#!",
+      "items": [
+        "Pengeloaan Sosial Media",
+        "Spending Ads Untuk Periklanan",
+        "Optimasi Meta & Tiktok",
+        "Optimasi Website"
+      ]
+    },
+    {
+      "icon": {
+        "src": "/images/icons/icon_bug.svg",
+        "alt": "- Service icon",
+        "width": 62,
+        "height": 62
+      },
+      "title": "Desain Konten Sosmed & Foto",
+      "link": "#!",
+      "items": [
+        "Konten Sosmed Meta",
+        "Konten Sosmed Tiktok",
+        "Konten Sosmed Short Video",
+        "Foto Produk"
+      ]
+    },
+    {
+      "icon": {
+        "src": "/images/icons/icon_programming.svg",
+        "alt": "- Service icon",
+        "width": 74,
+        "height": 63
+      },
+      "title": "Mentoring Online & Private",
+      "link": "#!",
+      "items": [
+        "Belajar Desain Pemula",
+        "Belajar Branding Produk",
+        "Belajar Optimasi",
+        "Belajar Penggunaan AI"
+      ]
+    }
+  ],
+  "decorations": [
+    {
+      "src": "/images/shapes/shape_line_5.svg",
+      "alt": "Shape",
+      "width": 190,
+      "height": 609,
+      "className": "shape_image_1"
+    },
+    {
+      "src": "/images/shapes/shape_line_6.svg",
+      "alt": "Shape",
+      "width": 270,
+      "height": 201,
+      "className": "shape_image_2"
+    },
+    {
+      "src": "/images/shapes/shape_space_1.svg",
+      "alt": "Shape",
+      "width": 1636,
+      "height": 49,
+      "className": "shape_image_3"
+    },
+    {
+      "src": "/images/shapes/shape_angle_1.webp",
+      "alt": "Shape Angle",
+      "width": 265,
+      "height": 364,
+      "className": "shape_image_4"
+    },
+    {
+      "src": "/images/shapes/shape_angle_2.webp",
+      "alt": "Shape Angle",
+      "width": 265,
+      "height": 269,
+      "className": "shape_image_5"
+    }
+  ]
+}
