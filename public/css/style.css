@@ -1548,7 +1548,7 @@ input[type=search]::-webkit-search-results-decoration {
   position: absolute;
   transition: transform .5s; }
   .site_header .site_logo .site_link {
-    max-width: 124px; }
+    max-width: 200px; }
   .site_header .site_logo .badge {
     margin-left: 5px; }
   .site_header .header_btns_group {
@@ -5193,7 +5193,9 @@ Responsive For Mobile & Tablet Devices
     display: none; }
 
   .site_header .site_logo .badge {
-    display: none; }
+    /* max-width: 200px; */
+    display: none; 
+  }
 
   .team_block {
     padding: 14px; }

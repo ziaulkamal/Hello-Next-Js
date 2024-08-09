@@ -1,0 +1,111 @@
+{
+  "header": {
+    "logo": [
+      {
+        "src": "/images/head/mindkreativ-dark.png",
+        "alt": "Mindkreativ",
+        "width": 450,
+        "height": 120
+      },
+      {
+        "src": "/images/head/mindkreativ-light.png",
+        "alt": "Mindkreativ",
+        "width": 450,
+        "height": 120
+      }
+    ],
+    "menuItems": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Company",
+        "dropdown": [
+          {
+            "label": "About Us",
+            "href": "about.html",
+            "icon": "/images/icons/icon_wifi.svg",
+            "description": "Learn more about Techco"
+          },
+          {
+            "label": "Our Pricing",
+            "href": "pricing.html",
+            "icon": "/images/icons/icon_dollar_2.svg",
+            "description": "Streamlined Pricing"
+          },
+          {
+            "label": "Portfolio",
+            "href": "portfolio.html",
+            "icon": "/images/icons/icon_chart.svg",
+            "description": "Explore our all overview"
+          },
+          {
+            "label": "Portfolio Details",
+            "href": "portfolio_details.html",
+            "icon": "/images/icons/icon_tag_2.svg",
+            "description": "Explore our work overview"
+          },
+          {
+            "label": "Team",
+            "href": "team.html",
+            "icon": "/images/icons/icon_user_2.svg",
+            "description": "We are friendly Join our team"
+          },
+          {
+            "label": "Team Details",
+            "href": "team_details.html",
+            "icon": "/images/icons/icon_users.svg",
+            "description": "We are friendly Join our team"
+          },
+          {
+            "label": "Services",
+            "href": "service.html",
+            "icon": "/images/icons/icon_pen.svg",
+            "description": "Happy to help you!"
+          },
+          {
+            "label": "Service Details",
+            "href": "service_details.html",
+            "icon": "/images/icons/icon_pen.svg",
+            "description": "Happy to help you!"
+          }
+        ]
+      },
+      {
+        "label": "Contact",
+        "href": "contact.html"
+      }
+    ],
+    "buttons": [
+
+      {
+        "label": "Get Started",
+        "href": "pricing.html",
+        "className": "btn btn-primary",
+        "icon": "fa-solid fa-arrow-up-right"
+      }
+    ],
+    "reviewLogos": [
+      {
+        "src": "/images/clients/client_logo_9.webp",
+        "alt": "Client Logo",
+        "width": 288,
+        "height": 83
+      },
+      {
+        "src": "/images/clients/client_logo_10.webp",
+        "alt": "Client Logo",
+        "width": 336,
+        "height": 77
+      }
+    ],
+    "author": {
+      "name": "Maverick Phoenix",
+      "designation": "CEO At Techco",
+      "image": "/images/avatar/avatar_7.webp",
+      "quote": "As a CEO at Techco I have been voice crying in the wilderness, trying to make requirements clear, use every minute to deliver the result, and not reinvent the wheel. Here at Techco, I made that possible for the clients.",
+      "quoteIcon": "/images/icons/icon_quote.svg"
+    }
+  }
+}

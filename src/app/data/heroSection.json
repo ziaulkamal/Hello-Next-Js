@@ -1,0 +1,82 @@
+{
+  "heroSection": {
+    "heading": "Partner Digital Mindkreativ",
+    "title": "Kami Membantu Perusahaan dalam <mark>Mendigitalkan</mark> Bisnis Mereka.",
+    "description": "Tingkatkan efisiensi dan jangkauan pasar Anda dengan solusi digitalisasi bisnis kami. Transformasi digital yang mudah dan cepat.",
+    "steps": [
+      "Fokus pada kualitas paling utama",
+      "Raih jangkauan lebih luas"
+    ],
+    "buttons": [
+      {
+        "type": "link",
+        "href": "/",
+        "label": "Konsultasi Hari Ini",
+        "icon": "fa-solid fa-arrow-up-right"
+      },
+      {
+        "type": "phone",
+        "href": "tel:+420318568511",
+        "label": {
+          "small": "Layanan Balas WhatsApp",
+          "strong": "(+62) 823 2016 4019"
+        },
+        "icon": "fa-solid fa-phone-volume"
+      }
+    ],
+    "images": {
+      "engine": [
+        {
+          "src": "/images/hero/circle_engine_1.webp",
+          "width": 153,
+          "height": 153,
+          "alt": "Mindkreativ"
+        },
+        {
+          "src": "/images/hero/circle_engine_2.webp",
+          "width": 448,
+          "height": 448,
+          "alt": "Mindkreativ"
+        },
+        {
+          "src": "/images/hero/circle_engine_3.webp",
+          "width": 566,
+          "height": 566,
+          "alt": "Mindkreativ"
+        },
+        {
+          "src": "/images/hero/circle_engine_4.png",
+          "width": 695,
+          "height": 656,
+          "alt": "Mindkreativ"
+        }
+      ],
+      "shapes": [
+        {
+          "src": "/images/hero/shape_image_1.webp",
+          "width": 1130,
+          "height": 72,
+          "alt": "Mindkreativ"
+        },
+        {
+          "src": "/images/hero/shape_image_2.webp",
+          "width": 1130,
+          "height": 116,
+          "alt": "Mindkreativ"
+        },
+        {
+          "src": "/images/hero/shape_image_3.webp",
+          "width": 328,
+          "height": 179,
+          "alt": "Mindkreativ"
+        },
+        {
+          "src": "/images/hero/shape_image_4.webp",
+          "width": 328,
+          "height": 179,
+          "alt": "Mindkreativ"
+        }
+      ]
+    }
+  }
+}
