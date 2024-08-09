@@ -276,7 +276,7 @@ const StackTechnology = () => {
                               width={300}
                               height={300}
                               src={review.admin.logoSrc}
-                              alt="Review Admin Logo"/>
+                              alt="Mindkreativ Reviews Clients"/>
                           </div>
                         </div>
                       </div>
