@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className={`${styles.siteFooter} site_footer footer_layout_2 section_decoration`}>
       <div className="decoration_item shape_image_1">
-        <Image width={1371} height={49}  src="/images/shapes/shape_space_2.svg" alt="Techco Shape" />
+        <Image width={1371} height={49}  src="/images/shapes/shape_space_2.svg" alt="Shape" />
       </div>
       <div className="container">
         <div className="footer_main_content">

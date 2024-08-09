@@ -69,7 +69,7 @@ const Articles = ({ title, date, author, content, slug, thumbnail, keywords, cat
     <section className="blog_details_section section_space bg-light">
       <div className="container">
         <div className="details_item_image">
-          <Image width={1290} height={960} src="/images/blog/blog_post_image_8.webp" alt="Techco - Blog Image"/>
+          <Image width={1290} height={960} src="/images/blog/blog_post_image_8.webp" alt="- Blog Image"/>
         </div>
         <div className="post_meta_wrap mb-4">
           <ul className="category_btns_group unordered_list">

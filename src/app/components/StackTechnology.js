@@ -916,16 +916,16 @@ const StackTechnology = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <Image width={39} height={39}  src="/images/shapes/shape_line_2.svg" alt="Techco Shape"/>
+        <Image width={39} height={39}  src="/images/shapes/shape_line_2.svg" alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <Image width={39} height={39}  src="/images/shapes/shape_line_3.svg" alt="Techco Shape"/>
+        <Image width={39} height={39}  src="/images/shapes/shape_line_3.svg" alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_3">
-        <Image width={39} height={39}  src="/images/shapes/shape_line_4.svg" alt="Techco Shape"/>
+        <Image width={39} height={39}  src="/images/shapes/shape_line_4.svg" alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_4">
-        <Image width={39} height={39}  src="/images/shapes/shape_space_3.svg" alt="Techco Shape"/>
+        <Image width={39} height={39}  src="/images/shapes/shape_space_3.svg" alt="Shape"/>
       </div>
     </section>
 

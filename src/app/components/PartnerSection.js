@@ -12,35 +12,35 @@ const PartnerSection = () => {
               <div className="client_logo_item">
                 <Image
                   width={168} height={70} src="/images/clients/client_logo_1.webp"
-                  alt="Techco - Client Logo Image"/>
+                  alt="- Client Logo Image"/>
               </div>
             </div>
             <div className="swiper-slide">
               <div className="client_logo_item">
                 <Image
                   width={168} height={70} src="/images/clients/client_logo_2.webp"
-                  alt="Techco - Client Logo Image"/>
+                  alt="- Client Logo Image"/>
               </div>
             </div>
             <div className="swiper-slide">
               <div className="client_logo_item">
                 <Image
                   width={168} height={70} src="/images/clients/client_logo_3.webp"
-                  alt="Techco - Client Logo Image"/>
+                  alt="- Client Logo Image"/>
               </div>
             </div>
             <div className="swiper-slide">
               <div className="client_logo_item">
                 <Image
                   width={168} height={70} src="/images/clients/client_logo_4.webp"
-                  alt="Techco - Client Logo Image"/>
+                  alt="- Client Logo Image"/>
               </div>
             </div>
             <div className="swiper-slide">
               <div className="client_logo_item">
                 <Image
                   width={168} height={70} src="/images/clients/client_logo_5.webp"
-                  alt="Techco - Client Logo Image"/>
+                  alt="- Client Logo Image"/>
               </div>
             </div>
 

@@ -136,10 +136,10 @@ const BlogSection = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <Image width={204} height={337}  src="/images/shapes/shape_line_7.svg" alt="Techco Shape"/>
+        <Image width={204} height={337}  src="/images/shapes/shape_line_7.svg" alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <Image width={265} height={363}  src="/images/shapes/shape_angle_4.webp" alt="Techco Shape Angle"/>
+        <Image width={265} height={363}  src="/images/shapes/shape_angle_4.webp" alt="Shape Angle"/>
       </div>
     </section>
 

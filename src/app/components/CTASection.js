@@ -66,7 +66,7 @@ const CTASection = () => {
           <div className="col-lg-8">
             <div className="instant_contact_form">
               <div className="small_title">
-                <i className="fa-solid fa-envelope-open-text"/>
+                <i className="fa-solid fa-envelope-open-text"> </i>
                 Let&apos;s Connect!
               </div>
               <h3 className="form_title">
@@ -155,13 +155,13 @@ const CTASection = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <Image width={192} height={616}  src="/images/shapes/shape_line_5.svg" alt="Techco Shape"/>
+        <Image width={192} height={616}  src="/images/shapes/shape_line_5.svg" alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <Image width={298} height={222}  src="/images/shapes/shape_line_6.svg" alt="Techco Shape"/>
+        <Image width={298} height={222}  src="/images/shapes/shape_line_6.svg" alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_3">
-        <Image width={1371} height={49}  src="/images/shapes/shape_space_5.svg" alt="Techco Shape"/>
+        <Image width={1371} height={49}  src="/images/shapes/shape_space_5.svg" alt="Shape"/>
       </div>
     </section>
 

@@ -10,7 +10,7 @@ const AboutCase = () => {
           <div className="col-lg-7 order-lg-last">
             <div className="about_image_2">
               <div className="image_wrap">
-                <Image width={198} height={240}  src="/images/about/about_image_6.webp" alt="Techco - About Image"/>
+                <Image width={198} height={240}  src="/images/about/about_image_6.webp" alt="- About Image"/>
               </div>
               <div
                 className={`${styles.about_funfact_info} about_funfact_info`} >
@@ -103,7 +103,7 @@ const AboutCase = () => {
           <div className="case_studies_wrapper">
             <div className="case_study_block">
               <div className="case_study_image">
-                <Image width={465} height={502}  src="/images/case/case_image_1.webp" alt="Techco - Cases Image"/>
+                <Image width={465} height={502}  src="/images/case/case_image_1.webp" alt="- Cases Image"/>
               </div>
               <div className="case_study_content">
                 <ul className="category_list unordered_list text-uppercase">
@@ -166,7 +166,7 @@ const AboutCase = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <Image width={1371} height={49}  src="/images/shapes/shape_space_2.svg" alt="Techco Shape"/>
+        <Image width={1371} height={49}  src="/images/shapes/shape_space_2.svg" alt="Shape"/>
       </div>
     </section>
 

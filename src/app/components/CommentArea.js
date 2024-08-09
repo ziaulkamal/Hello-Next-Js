@@ -12,7 +12,7 @@ const CommentArea = () =>{
           <div classname="comment_author_thumbnail">
             <img
               src="/images/avatar/avatar_9.webp"
-              alt="Techco - Comment Author Avatar"
+              alt="- Comment Author Avatar"
             />
           </div>
           <div classname="comment_author_content">
@@ -33,7 +33,7 @@ const CommentArea = () =>{
               <div classname="comment_author_thumbnail">
                 <img
                   src="/images/avatar/avatar_10.webp"
-                  alt="Techco - Comment Author Avatar"
+                  alt="- Comment Author Avatar"
                 />
               </div>
               <div classname="comment_author_content">
@@ -55,7 +55,7 @@ const CommentArea = () =>{
               <div classname="comment_author_thumbnail">
                 <img
                   src="/images/avatar/avatar_9.webp"
-                  alt="Techco - Comment Author Avatar"
+                  alt="- Comment Author Avatar"
                 />
               </div>
               <div classname="comment_author_content">
@@ -79,7 +79,7 @@ const CommentArea = () =>{
           <div classname="comment_author_thumbnail">
             <img
               src="/images/avatar/avatar_11.webp"
-              alt="Techco - Comment Author Avatar"
+              alt="- Comment Author Avatar"
             />
           </div>
           <div classname="comment_author_content">

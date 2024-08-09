@@ -45,3 +45,13 @@
   background-position: center; /* Tempatkan gambar di tengah */
   background-repeat: no-repeat; /* Hindari pengulangan gambar */
 }
+
+.page404 {
+  background-image: url('/images/shapes/bg_pattern_3.svg');
+  background-size: cover; /* Sesuaikan ukuran gambar latar belakang */
+  background-position: center; /* Tempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+  background-color:darkblue;
+  padding-top: 300px;
+  padding-bottom: 500px;
+}
