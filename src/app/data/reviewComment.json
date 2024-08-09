@@ -1,0 +1,38 @@
+[
+  {
+    "title": "“Kerja Sama Yang Dapat Support Penuh”",
+    "comment": "Kerja sama yang terjalin dengan tim kami telah memberikan dukungan penuh yang sangat kami hargai. Sebagai sarana media publikasi milik instansi, portal situs pemerintah RSUD Aceh Singkil merasa sangat terbantu dengan komitmen dan profesionalisme yang ditunjukkan. Kolaborasi ini telah mempermudah kami dalam menyampaikan informasi yang akurat dan tepat waktu kepada publik, serta memperkuat komunikasi antara instansi dan masyarakat.",
+    "admin": {
+      "name": "dr. Mardiana, M.K.M",
+      "designation": "Direktur RSUD Aceh Singkil",
+      "country": "Aceh, Aceh Singkil",
+      "imageSrc": "/images/clients/_commented_2.png",
+      "flagSrc": "/images/flag/ukraine_flag.webp",
+      "logoSrc": "/images/clients/aceh_singkil_rsud.png"
+    }
+  },
+  {
+    "title": "“Sangat Terbantu Dalam Manajemen Data”",
+    "comment": "Saya sangat terbantu dengan aplikasi pengelolaan zakat dan mustahik di Baitul Mal ini. Aplikasi ini benar-benar mempermudah manajemen data zakat dan mustahik kami, membuat proses menjadi lebih efisien dan transparan. Fitur-fitur yang disediakan sangat intuitif dan memudahkan dalam memantau serta melaporkan kegiatan zakat. Saya merasa lebih tenang karena semua data dikelola dengan baik dan akurat. ",
+    "admin": {
+      "name": "Salman Syarif",
+      "designation": "Komisioner Baitul Abdya",
+      "country": "Aceh, Aceh Barat Daya",
+      "imageSrc": "/images/clients/_commented_1.png",
+      "flagSrc": "/images/flag/indonesia_flag.webp",
+      "logoSrc": "/images/clients/bmk-abdya.jpg"
+    }
+  },
+  {
+    "title": "“Program Mentoring Website Administator”",
+    "comment": "Saya ingin mengucapkan terima kasih yang sebesar-besarnya atas kesempatan yang telah diberikan kepada saya untuk menjalani program magang di WUBI/MindKreativ. Selama periode magang ini, saya telah memperoleh banyak pengalaman berharga dan pembelajaran yang sangat bermanfaat untuk pengembangan pribadi dan profesional saya.",
+    "admin": {
+      "name": " Surya Dwi Waskitha",
+      "designation": "Mahasiswa Magang",
+      "country": "Jawa Timur, Bojonegoro",
+      "imageSrc": "/images/clients/_commented_3.png",
+      "flagSrc": "/images/flag/ukraine_flag.webp",
+      "logoSrc": "/images/clients/kampus_unigiri.png"
+    }
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "heading": {
+    "title": "Mulai Sekarang",
+    "description": "Ayo Buat Cerita Sukses Versi Kamu Sekarang Juga"
+  },
+  "contactMethods": [
+    {
+      "icon": "fa-phone-volume",
+      "link": "#!",
+      "text": "+62-823-2016-4019"
+    },
+    {
+      "icon": "fa-envelope",
+      "link": "#!",
+      "text": "hello@mindkreativ.com"
+    },
+    {
+      "icon": "fa-location-dot",
+      "link": "#!",
+      "text": "Banda Aceh, Aceh, Indonesia"
+    }
+  ],
+  "supportSteps": [
+    "Ceritakan kebutuhan kamu",
+    "Diskusi dengan ahli kami",
+    "Dapatkan masukan terbaik",
+    "Dan mulai project"
+  ],
+  "form": {
+    "title": "Hubungi kami jika kamu ingin bertanya akan hal yang sekiranya kamu minati !",
+    "fields": [
+      {
+        "id": "input_name",
+        "type": "text",
+        "name": "name",
+        "placeholder": "Nama Lengkap",
+        "icon": "fa-user"
+      },
+      {
+        "id": "input_email",
+        "type": "email",
+        "name": "email",
+        "placeholder": "Email",
+        "icon": "fa-envelope"
+      },
+      {
+        "id": "input_phone",
+        "type": "tel",
+        "name": "phone",
+        "placeholder": "Nomor WhatsApp",
+        "icon": "fa-phone-volume"
+      },
+      {
+        "id": "input_company",
+        "type": "text",
+        "name": "companyname",
+        "placeholder": "Asal Instansi / Atau Non Instansi",
+        "icon": "fa-globe"
+      },
+      {
+        "id": "input_textarea",
+        "type": "textarea",
+        "name": "message",
+        "placeholder": "Bagaimana kami dapat membantu?",
+        "icon": "fa-comments"
+      }
+    ],
+    "button": {
+      "text": "Kirim Pesan",
+      "icon": "fa-arrow-up-right"
+    }
+  }
+}

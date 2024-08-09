@@ -1,0 +1,174 @@
+{
+  "tabs": [
+    {
+      "id": "tab_web_platform",
+      "title": "Web Platform",
+      "technologies": [
+        {
+          "icon": "/images/icons/icon_php.svg",
+          "alt": "PHP SVG Icon",
+          "name": "PHP"
+        },
+        {
+          "icon": "/images/icons/icon_typescript.svg",
+          "alt": "Typescript SVG Icon",
+          "name": "Typescript"
+        },
+        {
+          "icon": "/images/icons/icon_react_js.svg",
+          "alt": "React Js SVG Icon",
+          "name": "React Js"
+        },
+        {
+          "icon": "/images/icons/icon_laravel.svg",
+          "alt": "Laraval SVG Icon",
+          "name": "Laraval"
+        },
+        {
+          "icon": "/images/icons/prestashop-logo-svgrepo-com.svg",
+          "alt": "Prestashop",
+          "name": "Prestashop"
+        },
+        {
+          "icon": "/images/icons/vue-9-logo-svgrepo-com.svg",
+          "alt": "Vue Js",
+          "name": "Vue Js"
+        },
+        {
+          "icon": "/images/icons/nextjs-svgrepo-com.svg",
+          "alt": "Next Js",
+          "name": "Next Js"
+        },
+        {
+          "icon": "/images/icons/magento-color-svgrepo-com.svg",
+          "alt": "Magento",
+          "name": "Magento"
+        },
+        {
+          "icon": "/images/icons/angular-svgrepo-com.svg",
+          "alt": "Angular Js",
+          "name": "Angular Js"
+        },
+        {
+          "icon": "/images/icons/wordpress-svgrepo-com.svg",
+          "alt": "Wordpress",
+          "name": "Wordpress"
+        }
+      ]
+    },
+    {
+      "id": "tab_databases",
+      "title": "Databases",
+      "technologies": [
+        {
+          "icon": "/images/case/icon_elephent.svg",
+          "alt": "PostgreSQL SVG Icon",
+          "name": "PostgreSQL"
+        },
+        {
+          "icon": "/images/icons/mysql-logo-svgrepo-com.svg",
+          "alt": "Mysql",
+          "name": "MySql"
+        },
+        {
+          "icon": "/images/icons/mongodb-logo-svgrepo-com.svg",
+          "alt": "MongoDB",
+          "name": "MongoDB"
+        },
+        {
+          "icon": "/images/icons/firebase-svgrepo-com.svg",
+          "alt": "Firebase",
+          "name": "Firebase"
+        }
+      ]
+    },
+    {
+      "id": "tab_cloud_devops",
+      "title": "Cloud & DevOps",
+      "technologies": [
+        {
+          "icon": "/images/icons/node-js-svgrepo-com.svg",
+          "alt": "NodeJs",
+          "name": "NodeJS"
+        },
+        {
+          "icon": "/images/icons/ubuntu-svgrepo-com.svg",
+          "alt": "Ubuntu",
+          "name": "Ubuntu"
+        },
+        {
+          "icon": "/images/icons/nginx-svgrepo-com.svg",
+          "alt": "NGINX",
+          "name": "NGINX"
+        },
+        {
+          "icon": "/images/icons/docker-svgrepo-com.svg",
+          "alt": "Docker",
+          "name": "Docker"
+        },
+        {
+          "icon": "/images/icons/centos-icon-svgrepo-com.svg",
+          "alt": "Centos",
+          "name": "Centos"
+        },
+        {
+          "icon": "/images/icons/apache-svgrepo-com.svg",
+          "alt": "Apache",
+          "name": "Apache"
+        }
+      ]
+    },
+    {
+      "id": "tab_mobile_apps",
+      "title": "Mobile Apps",
+      "technologies": [
+        {
+          "icon": "/images/icons/icon_typescript.svg",
+          "alt": "Typescript SVG Icon",
+          "name": "Typescript"
+        },
+        {
+          "icon": "/images/icons/icon_react_js.svg",
+          "alt": "React Js SVG Icon",
+          "name": "React Js"
+        },
+        {
+          "icon": "/images/icons/icon_laravel.svg",
+          "alt": "Laraval SVG Icon",
+          "name": "Laraval"
+        },
+        {
+          "icon": "/images/icons/firebase-svgrepo-com.svg",
+          "alt": "Firebase",
+          "name": "Firebase"
+        }
+      ]
+    },
+    {
+      "id": "tab_other_frameworks",
+      "title": "Other Frameworks",
+      "technologies": [
+        {
+          "icon": "/images/icons/icon_react_js.svg",
+          "alt": "React Js SVG Icon",
+          "name": "React Js"
+        },
+        {
+          "icon": "/images/icons/icon_laravel.svg",
+          "alt": "Laraval SVG Icon",
+          "name": "Laraval"
+        },
+        {
+          "icon": "/images/icons/icon_swift.svg",
+          "alt": "Swift",
+          "name": "Swift"
+        },
+        {
+          "icon": "/images/icons/icon_python.svg",
+          "alt": "Python",
+          "name": "Python"
+        }
+      ]
+    }
+  ]
+}

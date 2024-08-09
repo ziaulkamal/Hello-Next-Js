@@ -1,0 +1,81 @@
+{
+  "aboutSection": {
+    "heading": "Tentang Kami",
+    "title": "Kenapa Harus <mark>Memilih</mark> Mindkreativ ?",
+    "description": "MindKreativ membantu Anda mencapai tujuan digital dengan proses yang transparan dan edukatif. Harga jelas, tanpa biaya aneh-aneh. Hasilnya keren dan bikin kamu puas. Gampang dimengerti karena ada panduannya. "
+  },
+  "aboutCaseSection": {
+    "heading": "Contoh Kasus",
+    "title": "Yang <mark>Baru Saja</mark> Terselesaikan"
+  },
+  "caseStudies": [
+    {
+      "image": {
+        "src": "/images/case/case_image_1.webp",
+        "alt": "Mindkreativ",
+        "width": 465,
+        "height": 502
+      },
+      "categories": [
+        {
+          "name": "Aplikasi Manajement",
+          "link": "#!"
+        }
+      ],
+      "title": "Sizakki Baitulmal Aceh Barat Daya",
+      "titleLink": "#!",
+      "description": "Aplikasi berbasis website dimana memiliki fungsi untuk melakukan pendataan calon penerima bantuan dari dinas terkait. Terbentuk dalam 2 aspek, Sarana informasi berbasis portal berita dan juga tata kelola manajement berbasis aplikasi.",
+      "industry": "Aplikasi Pemerintah",
+      "country": "Aceh Barat Daya",
+      "technologies": [
+        {
+          "src": "/images/icons/icon_laravel.svg",
+          "alt": "Laravel Mindkreativ",
+          "width": 30,
+          "height": 32
+        },
+        {
+          "src": "/images/icons/icon_php.svg",
+          "alt": "Php Mindkreativ",
+          "width": 30,
+          "height": 32
+        }
+      ],
+      "detailsLink": "#!"
+    },
+    {
+      "image": {
+        "src": "/images/case/case_image_2.webp",
+        "alt": "Mindkreativ",
+        "width": 465,
+        "height": 502
+      },
+      "categories": [
+        {
+          "name": "Website Landing Page",
+          "link": "#!"
+        }
+      ],
+      "title": "KFCakes Baking Class",
+      "titleLink": "#!",
+      "description": "Website yang menyajikan katalog produk yang dimana untuk kebutuhan Meta Ads untuk menargetkan konsumen dalam jangkauan tertentu",
+      "industry": "Website UMKM",
+      "country": "Banda Aceh",
+      "technologies": [
+        {
+          "src": "/images/icons/wordpress.png",
+          "alt": "Wordpress Mindkreativ",
+          "width": 30,
+          "height": 32
+        },
+        {
+          "src": "/images/icons/icon_php.svg",
+          "alt": "Php Mindkreativ",
+          "width": 30,
+          "height": 32
+        }
+      ],
+      "detailsLink": "#!"
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 import Image from "next/image";
 import styles from '@/styles/style.module.css'
+import workingProcessData from '@/app/data/workingProcessSection.json';
+import technologyTabsData from '@/app/data/technologyTabs.json'; // Assuming the JSON data is saved here
+import reviewComments from '@/app/data/reviewComment.json';
+
 
 const StackTechnology = () => {
   return (
@@ -10,178 +14,76 @@ const StackTechnology = () => {
           <div className="col-lg-6">
             <div className="heading_block">
               <div
-                className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`} >
-                Working Process
+                className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`}>
+                {workingProcessData.workingProcess.heading}
               </div>
-              <h2 className="heading_text mb-0">
-                Our
-                <mark> Approach</mark>
-              </h2>
+              <h2
+                className="heading_text mb-0"
+                dangerouslySetInnerHTML={{
+                __html: workingProcessData.workingProcess.title
+              }}></h2>
             </div>
             <div className="accordion" id="service_process_faq">
-              <div className="accordion-item">
-                <div
-                  className="accordion-button"
-                  role="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse_one"
-                  aria-expanded="true"
-                  aria-controls="collapse_one">
-                  01. Discovery Phase
-                </div>
-                <div
-                  id="collapse_one"
-                  className="accordion-collapse collapse show"
-                  data-bs-parent="#service_process_faq">
-                  <div className="accordion-body">
-                    <p className="m-0">
-                      Data - driven diagnostic and predictive app for improving outcomes Data driven
-                      diagnostic and predictive app for improving.
-                    </p>
+              {workingProcessData
+                .workingProcess
+                .steps
+                .map((step) => (
+                  <div className="accordion-item" key={step.id}>
+                    <div
+                      className={`accordion-button ${step.id === 'collapse_one'
+                      ? ''
+                      : 'collapsed'}`}
+                      role="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#${step.id}`}
+                      aria-expanded={step.id === 'collapse_one'}
+                      aria-controls={step.id}>
+                      {step.title}
+                    </div>
+                    <div
+                      id={step.id}
+                      className={`accordion-collapse collapse ${step.id === 'collapse_one'
+                      ? 'show'
+                      : ''}`}
+                      data-bs-parent="#service_process_faq">
+                      <div className="accordion-body">
+                        <p className="m-0">
+                          {step.content}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <div
-                  className="accordion-button collapsed"
-                  role="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse_two"
-                  aria-expanded="false"
-                  aria-controls="collapse_two">
-                  02. Design and Development
-                </div>
-                <div
-                  id="collapse_two"
-                  className="accordion-collapse collapse"
-                  data-bs-parent="#service_process_faq">
-                  <div className="accordion-body">
-                    <p className="m-0">
-                      Data - driven diagnostic and predictive app for improving outcomes Data driven
-                      diagnostic and predictive app for improving.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <div
-                  className="accordion-button collapsed"
-                  role="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse_three"
-                  aria-expanded="false"
-                  aria-controls="collapse_three">
-                  03. Maintenance
-                </div>
-                <div
-                  id="collapse_three"
-                  className="accordion-collapse collapse"
-                  data-bs-parent="#service_process_faq">
-                  <div className="accordion-body">
-                    <p className="m-0">
-                      Data - driven diagnostic and predictive app for improving outcomes Data driven
-                      diagnostic and predictive app for improving.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <div
-                  className="accordion-button collapsed"
-                  role="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse_four"
-                  aria-expanded="false"
-                  aria-controls="collapse_four">
-                  04. Deployment
-                </div>
-                <div
-                  id="collapse_four"
-                  className="accordion-collapse collapse"
-                  data-bs-parent="#service_process_faq">
-                  <div className="accordion-body">
-                    <p className="m-0">
-                      Data - driven diagnostic and predictive app for improving outcomes Data driven
-                      diagnostic and predictive app for improving.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <div
-                  className="accordion-button collapsed"
-                  role="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse_five"
-                  aria-expanded="false"
-                  aria-controls="collapse_five">
-                  05. Testing and QA
-                </div>
-                <div
-                  id="collapse_five"
-                  className="accordion-collapse collapse"
-                  data-bs-parent="#service_process_faq">
-                  <div className="accordion-body">
-                    <p className="m-0">
-                      Data - driven diagnostic and predictive app for improving outcomes Data driven
-                      diagnostic and predictive app for improving.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                ))}
             </div>
           </div>
           <div className="col-lg-5">
             <ul className="content_layer_group unordered_list_block text-center">
-              <li
-                role="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse_one"
-                aria-expanded="true"
-                aria-controls="collapse_one">
-                <span>Discovery Phase</span>
-              </li>
-              <li
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse_two"
-                aria-expanded="false"
-                aria-controls="collapse_two">
-                <span>Design and Development</span>
-              </li>
-              <li
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse_three"
-                aria-expanded="false"
-                aria-controls="collapse_three">
-                <span>Maintenance</span>
-              </li>
-              <li
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse_four"
-                aria-expanded="false"
-                aria-controls="collapse_four">
-                <span>Deployment</span>
-              </li>
-              <li
-                role="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse_five"
-                aria-expanded="false"
-                aria-controls="collapse_five">
-                <span>Testing and QA</span>
-              </li>
+              {workingProcessData
+                .workingProcess
+                .steps
+                .map((step) => (
+                  <li
+                    role="button"
+                    key={step.id}
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#${step.id}`}
+                    aria-expanded={step.id === 'collapse_one'}
+                    aria-controls={step.id}>
+                    <span>{step.title}</span>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>
         <div className="section_space">
           <div className="heading_block text-center">
             <div
-              className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`} >
-              Our Technologies
+              className={`${styles.headingFocusFrontPage} heading_focus_text has_underline d-inline-flex`}>
+              Teknologi
             </div>
             <h2 className="heading_text mb-0">
-              We Use
-              <mark> Technologies</mark>
+              Kami Menggunakan
+              <mark> Stack Teknologi</mark>
             </h2>
           </div>
           <div className="tab_block_wrapper">
@@ -238,494 +140,39 @@ const StackTechnology = () => {
                   type="button"
                   role="tab"
                   aria-selected="false">
-                  Other Frameworks
+                  Framework Lain
                 </button>
               </li>
             </ul>
             <div className="tab-content">
-              <div
-                className="tab-pane fade show active"
-                id="tab_web_platform"
-                role="tabpanel">
-                <div className="web_development_technologies row justify-content-center">
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_php.svg" alt="PHP SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">PHP</h3>
-                      </div>
+              {technologyTabsData
+                .tabs
+                .map((tab) => (
+                  <div
+                    key={tab.id}
+                    className={`tab-pane fade ${tab.id === 'tab_web_platform'
+                    ? 'show active'
+                    : ''}`}
+                    id={tab.id}
+                    role="tabpanel">
+                    <div className="web_development_technologies row justify-content-center">
+                      {tab
+                        .technologies
+                        .map((tech, index) => (
+                          <div key={index} className="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
+                              <div className="iconbox_icon">
+                                <Image width={39} height={39} src={tech.icon} alt={tech.alt}/>
+                              </div>
+                              <div className="iconbox_content">
+                                <h3 className="iconbox_title mb-0">{tech.name}</h3>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
                     </div>
                   </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_javascript.svg" alt="JavaScript SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">JavaScript</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/case/icon_elephent.svg" alt="PostgreSQL SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">PostgreSQL</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Swift</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Typescript</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Python</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">G318</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Java</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Ruby</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">C++</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">React Js</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Laraval</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="tab_databases" role="tabpanel">
-                <div className="web_development_technologies row justify-content-center">
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/case/icon_elephent.svg" alt="PostgreSQL SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">PostgreSQL</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Swift</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Typescript</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Python</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">G318</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Java</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Ruby</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">C++</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">React Js</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Laraval</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="tab_cloud_devops" role="tabpanel">
-                <div className="web_development_technologies row justify-content-center">
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_swift.svg" alt="Swift SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Swift</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Typescript</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Python</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">G318</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Java</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Ruby</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">C++</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">React Js</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Laraval</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="tab_mobile_apps" role="tabpanel">
-                <div className="web_development_technologies row justify-content-center">
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_typescript.svg" alt="Typescript SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Typescript</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Python</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">G318</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Java</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Ruby</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">C++</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">React Js</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Laraval</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade" id="tab_other_frameworks" role="tabpanel">
-                <div className="web_development_technologies row justify-content-center">
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/case/icon_python.svg" alt="Python SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Python</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_g318.svg" alt="G318 SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">G318</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_java.svg" alt="Java SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Java</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_ruby.svg" alt="Ruby SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Ruby</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_c_plus.svg" alt="C++ SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">C++</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_react_js.svg" alt="React Js SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">React Js</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
-                      <div className="iconbox_icon">
-                        <Image width={39} height={39}  src="/images/icons/icon_laravel.svg" alt="Laraval SVG Icon"/>
-                      </div>
-                      <div className="iconbox_content">
-                        <h3 className="iconbox_title mb-0">Laraval</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                ))}
             </div>
           </div>
         </div>
@@ -733,14 +180,18 @@ const StackTechnology = () => {
           <div className="col-lg-4">
             <div className="deals_winner_customers">
               <h3 className="title_text">
-                <mark>3,900+ </mark>
-                customers win deals with Techco
+                <mark>2,900+ </mark>
+                Antusias Teknologi
               </h3>
               <div className="row">
                 <div className="col-6">
                   <div className="review_short_info">
                     <div className="icon">
-                      <Image width={39} height={39}  src="/images/icons/icon_c.svg" alt="C SVG Icon"/>
+                      <Image
+                        width={39}
+                        height={39}
+                        src="/images/icons/reddit-color-svgrepo-com.svg"
+                        alt="C SVG Icon"/>
                     </div>
                     <ul className="rating_block unordered_list">
                       <li>
@@ -759,17 +210,17 @@ const StackTechnology = () => {
                         <i className="fa-solid fa-star fa-fw"/>
                       </li>
                     </ul>
-                    <div className="review_counter">
-                      From
-                      <b>200+</b>
-                      reviews
-                    </div>
+
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="review_short_info">
                     <div className="icon">
-                      <Image width={39} height={39}  src="/images/icons/icon_g2.svg" alt="C SVG Icon"/>
+                      <Image
+                        width={39}
+                        height={39}
+                        src="/images/icons/instagram-1-svgrepo-com.svg"
+                        alt="C SVG Icon"/>
                     </div>
                     <ul className="rating_block unordered_list">
                       <li>
@@ -788,11 +239,7 @@ const StackTechnology = () => {
                         <i className="fa-solid fa-star fa-fw"/>
                       </li>
                     </ul>
-                    <div className="review_counter">
-                      From
-                      <b>300+</b>
-                      reviews
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -802,105 +249,39 @@ const StackTechnology = () => {
             <div className="review_onecol_wrapper">
               <div className="review_onecol_carousel swiper">
                 <div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                    <div className="review_block_2">
-                      <h3 className="review_title">“Amazing software services”</h3>
-                      <p className="review_commtent">
-                        The solutions they&apos;re providing is helping our business run more smoothly. We&apos;ve
-                        been able to make quick developments with them, meeting our product vision
-                        within the timeline we set up. Listen to them because they can give strong
-                        advice about how to build good products.
-                      </p>
-                      <div className="d-md-flex justify-content-md-between">
-                        <div className="review_admin">
-                          <div className="review_admin_image">
-                            <Image width={39} height={39}  src="/images/avatar/avatar_5.webp" alt="Maverick Phoenix"/>
-                          </div>
-                          <div className="review_admin_info">
-                            <h4 className="review_admin_name">Maverick Phoenix</h4>
-                            <span className="review_admin_designation">
-                              Board Member, UNIQA
-                            </span>
-                            <div className="review_admin_country">
-                              <span className="country_flag">
-                                <Image width={39} height={39}  src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
-                              </span>
-                              <span className="country_text">Seattle, Ukraine</span>
+                  {reviewComments.map((review, index) => (
+                    <div className="swiper-slide" key={index}>
+                      <div className="review_block_2">
+                        <h3 className="review_title">{review.title}</h3>
+                        <p className="review_commtent">{review.comment}</p>
+                        <div className="d-md-flex justify-content-md-between">
+                          <div className="review_admin">
+                            <div className="review_admin_image">
+                              <Image
+                                width={345}
+                                height={30}
+                                src={review.admin.imageSrc}
+                                alt={review.admin.name}/>
+                            </div>
+                            <div className="review_admin_info">
+                              <h4 className="review_admin_name">{review.admin.name}</h4>
+                              <span className="review_admin_designation">{review.admin.designation}</span>
+                              <div className="review_admin_country">
+                                <span className="country_text">{review.admin.country}</span>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div className="review_admin_logo">
-                          <Image width={39} height={39}  src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
+                          <div className="review_admin_logo">
+                            <Image
+                              width={300}
+                              height={300}
+                              src={review.admin.logoSrc}
+                              alt="Review Admin Logo"/>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="review_block_2">
-                      <h3 className="review_title">“Amazing software services”</h3>
-                      <p className="review_commtent">
-                        The solutions they&apos;re providing is helping our business run more smoothly. We&apos;ve
-                        been able to make quick developments with them, meeting our product vision
-                        within the timeline we set up. Listen to them because they can give strong
-                        advice about how to build good products.
-                      </p>
-                      <div className="d-md-flex justify-content-md-between">
-                        <div className="review_admin">
-                          <div className="review_admin_image">
-                            <Image width={39} height={39}  src="/images/avatar/avatar_6.webp" alt="Maverick Phoenix"/>
-                          </div>
-                          <div className="review_admin_info">
-                            <h4 className="review_admin_name">Maverick Phoenix</h4>
-                            <span className="review_admin_designation">
-                              Board Member, UNIQA
-                            </span>
-                            <div className="review_admin_country">
-                              <span className="country_flag">
-                                <Image width={39} height={39}  src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
-                              </span>
-                              <span className="country_text">Seattle, Ukraine</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="review_admin_logo">
-                          <Image width={39} height={39}  src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="review_block_2">
-                      <h3 className="review_title">“Amazing software services”</h3>
-                      <p className="review_commtent">
-                        The solutions they&apos;re providing is helping our business run more smoothly. We&apos;ve
-                        been able to make quick developments with them, meeting our product vision
-                        within the timeline we set up. Listen to them because they can give strong
-                        advice about how to build good products.
-                      </p>
-                      <div className="d-md-flex justify-content-md-between">
-                        <div className="review_admin">
-                          <div className="review_admin_image">
-                            <Image width={39} height={39}  src="/images/avatar/avatar_7.webp" alt="Maverick Phoenix"/>
-                          </div>
-                          <div className="review_admin_info">
-                            <h4 className="review_admin_name">Maverick Phoenix</h4>
-                            <span className="review_admin_designation">
-                              Board Member, UNIQA
-                            </span>
-                            <div className="review_admin_country">
-                              <span className="country_flag">
-                                <Image width={39} height={39}  src="/images/flag/ukraine_flag.webp" alt="Ukraine Flag"/>
-                              </span>
-                              <span className="country_text">Seattle, Ukraine</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="review_admin_logo">
-                          <Image width={39} height={39}  src="/images/clients/client_logo_8.webp" alt="Review Admin Logo"/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
                 <div className="carousel_arrows_nav">
                   <button type="button" className="r1cc-swiper-button-prev">
@@ -916,16 +297,32 @@ const StackTechnology = () => {
         </div>
       </div>
       <div className="decoration_item shape_image_1">
-        <Image width={39} height={39}  src="/images/shapes/shape_line_2.svg" alt="Shape"/>
+        <Image
+          width={39}
+          height={39}
+          src="/images/shapes/shape_line_2.svg"
+          alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_2">
-        <Image width={39} height={39}  src="/images/shapes/shape_line_3.svg" alt="Shape"/>
+        <Image
+          width={39}
+          height={39}
+          src="/images/shapes/shape_line_3.svg"
+          alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_3">
-        <Image width={39} height={39}  src="/images/shapes/shape_line_4.svg" alt="Shape"/>
+        <Image
+          width={39}
+          height={39}
+          src="/images/shapes/shape_line_4.svg"
+          alt="Shape"/>
       </div>
       <div className="decoration_item shape_image_4">
-        <Image width={39} height={39}  src="/images/shapes/shape_space_3.svg" alt="Shape"/>
+        <Image
+          width={39}
+          height={39}
+          src="/images/shapes/shape_space_3.svg"
+          alt="Shape"/>
       </div>
     </section>
 

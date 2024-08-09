@@ -1,0 +1,61 @@
+{
+  "faqs": [
+    {
+      "question": "Apa yang harus dipertimbangkan saat memilih tumpukan teknologi untuk aplikasi berbasis web?",
+      "answer": "Memilih tumpukan teknologi yang tepat sangat penting untuk keberhasilan aplikasi berbasis web. Berikut adalah beberapa faktor kunci yang perlu dipertimbangkan:",
+      "services": [
+        "Kebutuhan dan tujuan proyek",
+        "Skalabilitas dan kebutuhan performa",
+        "Biaya pengembangan dan pemeliharaan",
+        "Kompatibilitas dengan sistem yang ada",
+        "Pertimbangan keamanan",
+        "Keahlian dan ketersediaan pengembang",
+        "Dukungan komunitas dan dokumentasi",
+        "Pertumbuhan masa depan dan tren teknologi"
+      ]
+    },
+    {
+      "question": "Bagaimana cara mengoptimalkan merek menggunakan SEO dan SMO?",
+      "answer": "Mengoptimalkan merek melalui SEO (Search Engine Optimization) dan SMO (Social Media Optimization) adalah strategi yang penting untuk meningkatkan visibilitas online dan keterlibatan dengan audiens. Berikut adalah beberapa langkah kunci:",
+      "services": [
+        "SEO: Optimalkan konten website dengan kata kunci yang relevan untuk meningkatkan peringkat di mesin pencari.",
+        "SEO: Perbaiki struktur website dan kecepatan loading untuk pengalaman pengguna yang lebih baik.",
+        "SEO: Bangun backlink berkualitas untuk meningkatkan otoritas domain.",
+        "SMO: Buat dan kelola profil media sosial yang konsisten dengan merek di platform yang relevan.",
+        "SMO: Publikasikan konten yang menarik dan berbagi dengan audiens untuk meningkatkan keterlibatan.",
+        "SMO: Gunakan iklan berbayar dan kampanye untuk meningkatkan jangkauan dan visibilitas merek.",
+        "SMO: Monitor dan analisis performa media sosial untuk menyesuaikan strategi dan meningkatkan hasil."
+      ]
+    },
+    {
+      "question": "Bagaimana cara mengatur anggaran dengan murah untuk pemesanan desain foto untuk media sosial?",
+      "answer": "Untuk mengatur anggaran dengan murah saat memesan desain foto untuk media sosial, Anda dapat mengikuti langkah-langkah berikut:",
+      "services": [
+        "Pilih paket desain yang sesuai dengan anggaran Anda, yang menawarkan beberapa desain dalam satu paket.",
+        "Manfaatkan penawaran spesial atau diskon yang tersedia dari penyedia jasa desain.",
+        "Diskusikan kebutuhan desain Anda secara jelas untuk menghindari revisi yang tidak perlu dan biaya tambahan.",
+        "Pertimbangkan untuk melakukan pemesanan desain dalam jumlah besar untuk mendapatkan tarif yang lebih baik per desain.",
+        "Gunakan desain yang dapat diadaptasi untuk berbagai platform media sosial untuk efisiensi biaya."
+      ]
+    },
+    {
+      "question": "Berapa biaya pembuatan aplikasi dan apa saja faktor yang mempengaruhinya?",
+      "answer": "Biaya pembuatan aplikasi dapat bervariasi tergantung pada beberapa faktor, termasuk jumlah modul atau fitur yang diinginkan dan framework yang digunakan. Berikut adalah rentang harga umum untuk pembuatan aplikasi:",
+      "services": [
+        "Biaya dasar pembuatan aplikasi mulai dari 1,5 juta rupiah untuk aplikasi dengan fitur dasar dan modul terbatas.",
+        "Untuk aplikasi dengan fitur lebih kompleks dan beberapa modul, biaya bisa mencapai sekitar 10 juta hingga 30 juta rupiah.",
+        "Aplikasi dengan fitur lanjutan, integrasi dengan sistem lain, atau kebutuhan desain khusus dapat memerlukan biaya antara 30 juta hingga 60 juta rupiah.",
+        "Framework yang digunakan juga mempengaruhi biaya. Framework yang lebih kompleks atau khusus mungkin menambah biaya pembuatan aplikasi."
+      ]
+    },
+    {
+      "question": "Bagaimana cara mendapatkan dukungan maintenance dan helpdesk?",
+      "answer": "Kami menyediakan dukungan maintenance dan helpdesk melalui beberapa saluran untuk memastikan Anda mendapatkan bantuan yang cepat dan efisien:",
+      "services": [
+        "Untuk bantuan umum dan dukungan, Anda dapat menghubungi kami melalui media sosial seperti TikTok dan Instagram.",
+        "Untuk bantuan teknis yang lebih mendalam, Anda dapat langsung bertemu dengan bagian teknis kami untuk konsultasi lebih lanjut.",
+        "Jika Anda memerlukan dukungan terkait hardening server atau hosting, Anda dapat menghubungi admin kami melalui WhatsApp."
+      ]
+    }
+  ]
+}

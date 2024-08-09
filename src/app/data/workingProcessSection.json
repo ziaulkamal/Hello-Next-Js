@@ -1,0 +1,33 @@
+{
+  "workingProcess": {
+    "heading": "Teknis Pengerjaan",
+    "title": "Tahapan <mark>Teknis</mark> Memulai",
+    "steps": [
+      {
+        "id": "collapse_one",
+        "title": "01. Konsultasi Jadwal",
+        "content": "Kami memulai dengan sesi konsultasi untuk menentukan jadwal proyek yang sesuai. Dalam konsultasi ini, kami akan mendiskusikan kebutuhan dan tujuan Anda untuk menyusun rencana waktu yang realistis. Tujuannya adalah memastikan semua pihak memahami ekspektasi dan proyek dapat berjalan sesuai jadwal yang disepakati."
+      },
+      {
+        "id": "collapse_two",
+        "title": "02. Pemilihan Segment Layanan",
+        "content": "Di tahap ini, Anda akan memilih layanan yang paling sesuai dengan kebutuhan Anda. Kami menawarkan berbagai layanan seperti pembuatan aplikasi berbasis website, konsultasi keamanan, pembuatan website menggunakan CMS, optimasi sosial media dan branding, desain konten serta foto untuk sosial media, dan mentoring online atau private. Kami akan membantu Anda menentukan layanan yang tepat untuk mencapai tujuan Anda secara efektif."
+      },
+      {
+        "id": "collapse_three",
+        "title": "03. Pembayaran",
+        "content": "Setelah layanan dipilih, kami akan mengirimkan rincian biaya dan metode pembayaran. Umumnya, pembayaran di muka diperlukan untuk memulai proyek, dengan sisa pembayaran dilakukan sesuai jadwal yang telah disepakati. Kami memastikan proses pembayaran dilakukan dengan cara yang aman dan transparan."
+      },
+      {
+        "id": "collapse_four",
+        "title": "04. Pengerjaan",
+        "content": "Tim kami akan mulai mengerjakan proyek Anda sesuai dengan layanan yang dipilih dan jadwal yang disepakati. Kami akan terus berkomunikasi dengan Anda untuk memberikan update tentang progres dan memastikan bahwa hasil akhir sesuai dengan harapan Anda."
+      },
+      {
+        "id": "collapse_five",
+        "title": "05. Testing dan Tanya Jawab",
+        "content": "Setelah pengerjaan selesai, kami akan melakukan testing untuk memastikan semua fitur berfungsi dengan baik. Kami juga menyediakan sesi tanya jawab untuk menjelaskan setiap aspek dari proyek dan menjawab pertanyaan Anda. Penyesuaian terakhir dapat dilakukan sebelum proyek dinyatakan selesai."
+      }
+    ]
+  }
+}

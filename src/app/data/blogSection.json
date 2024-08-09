@@ -1,0 +1,48 @@
+{
+  "section": {
+    "heading": {
+      "title": "Bahan Referensi Bacaan",
+      "subtitle": "Artikel <mark>Terbaru</mark>"
+    },
+    "posts": [
+      {
+        "image": "/images/blog/blog_post_image_12.webp",
+        "title": "Optimalkan Penggunaan SEO OfPage dan OnPage.",
+        "author": "Mind AI",
+        "date": "11/12/2024",
+        "comments": 24,
+        "link": "#!"
+      },
+      {
+        "image": "/images/blog/blog_post_image_13.webp",
+        "title": "Memahami Konsep Prompt pada Platform AI.",
+        "author": "Mind AI",
+        "date": "11/12/2024",
+        "comments": 24,
+        "link": "#!"
+      },
+      {
+        "image": "/images/blog/blog_post_image_14.webp",
+        "title": "Langkah Mudah Membuat Google Business.",
+        "author": "Mind AI",
+        "date": "11/12/2024",
+        "comments": 24,
+        "link": "#!"
+      }
+    ],
+    "decoration": [
+      {
+        "image": "/images/shapes/shape_line_7.svg",
+        "alt": "Shape",
+        "width": 204,
+        "height": 337
+      },
+      {
+        "image": "/images/shapes/shape_angle_4.webp",
+        "alt": "Shape Angle",
+        "width": 265,
+        "height": 363
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "footer": {
+    "company": [
+      { "name": "Tentang Kami", "link": "#!" },
+      { "name": "Team & Divisi", "link": "#!" },
+      { "name": "Portofolio", "link": "#!" },
+      { "name": "Client ", "link": "#!" },
+      { "name": "Kareer", "link": "#!" },
+      { "name": "Kontak", "link": "#!" }
+    ],
+    "expertise": [
+      { "name": "ChatGPT", "link": "#!" },
+      { "name": "Gemini Google", "link": "#!" },
+      { "name": "Synthesia", "link": "#!" },
+      { "name": "Github", "link": "#!" },
+      { "name": "Midjourney", "link": "#!" },
+      { "name": "Grammarly", "link": "#!" }
+    ],
+    "industries": [
+      { "name": "Keuangan", "link": "#!" },
+      { "name": "Internet Of Think", "link": "#!" },
+      { "name": "Restribusi Sampah", "link": "#!" },
+      { "name": "Broadcast WhatsApp", "link": "#!" },
+      { "name": "Kasir Integrasi", "link": "#!" }
+    ],
+    "newsletter": {
+      "description": "Daftar dan dapatkan informasi serta penawaran terbaik dari kami.",
+      "buttonText": "Langganan"
+    },
+    "socialIcons": [
+      { "icon": "fa-facebook-f", "link": "#!" },
+      { "icon": "fa-twitter", "link": "#!" },
+      { "icon": "fa-linkedin-in", "link": "#!" },
+      { "icon": "fa-youtube", "link": "#!" }
+    ],
+    "copyright": {
+      "text": "Copyright © 2024 Mindkreativ, All rights reserved.",
+      "links": [
+        { "text": "Terms of Use", "link": "#!" },
+        { "text": "Privacy Policy", "link": "#!" }
+      ]
+    }
+  },
+  "decoration": [
+    {
+      "image": "/images/shapes/shape_space_2.svg",
+      "alt": "Shape",
+      "width": 1371,
+      "height": 49
+    }
+  ]
+}
