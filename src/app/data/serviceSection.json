@@ -5,12 +5,12 @@
     {
       "icon": {
         "src": "/images/icons/icon_code.svg",
-        "alt": "- Service icon",
+        "alt": "Mindkreativ",
         "width": 62,
         "height": 62
       },
       "title": "Pembuatan Aplikasi Berbasis Website",
-      "link": "service_details.html",
+      "link": "#!",
       "items": [
         "Aplikasi Kasir",
         "Aplikasi Survey Elektronik",
@@ -21,7 +21,7 @@
     {
       "icon": {
         "src": "/images/icons/icon_programming_tree.svg",
-        "alt": "- Service icon",
+        "alt": "Mindkreativ",
         "width": 62,
         "height": 63
       },
@@ -37,7 +37,7 @@
     {
       "icon": {
         "src": "/images/icons/icon_monitor_2.svg",
-        "alt": "- Service icon",
+        "alt": "Mindkreativ",
         "width": 58,
         "height": 56
       },
@@ -53,7 +53,7 @@
     {
       "icon": {
         "src": "/images/icons/icon_phone.svg",
-        "alt": "- Service icon",
+        "alt": "Mindkreativ",
         "width": 41,
         "height": 62
       },
@@ -69,7 +69,7 @@
     {
       "icon": {
         "src": "/images/icons/icon_bug.svg",
-        "alt": "- Service icon",
+        "alt": "Mindkreativ",
         "width": 62,
         "height": 62
       },
@@ -85,7 +85,7 @@
     {
       "icon": {
         "src": "/images/icons/icon_programming.svg",
-        "alt": "- Service icon",
+        "alt": "Mindkreativ",
         "width": 74,
         "height": 63
       },
@@ -102,35 +102,35 @@
   "decorations": [
     {
       "src": "/images/shapes/shape_line_5.svg",
-      "alt": "Shape",
+      "alt": "Mindkreativ",
       "width": 190,
       "height": 609,
       "className": "shape_image_1"
     },
     {
       "src": "/images/shapes/shape_line_6.svg",
-      "alt": "Shape",
+      "alt": "Mindkreativ",
       "width": 270,
       "height": 201,
       "className": "shape_image_2"
     },
     {
       "src": "/images/shapes/shape_space_1.svg",
-      "alt": "Shape",
+      "alt": "Mindkreativ",
       "width": 1636,
       "height": 49,
       "className": "shape_image_3"
     },
     {
       "src": "/images/shapes/shape_angle_1.webp",
-      "alt": "Shape Angle",
+      "alt": "Mindkreativ",
       "width": 265,
       "height": 364,
       "className": "shape_image_4"
     },
     {
       "src": "/images/shapes/shape_angle_2.webp",
-      "alt": "Shape Angle",
+      "alt": "Mindkreativ",
       "width": 265,
       "height": 269,
       "className": "shape_image_5"
