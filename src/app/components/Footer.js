@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer_main_content">
           <div className="row justify-content-lg-between">
-            <div className="col-lg-2 col-md-6">
+            <div className="col-6 col-lg-2 col-md-6">
               <div className="footer_widget">
                 <h3 className="footer_info_title">Startup</h3>
                 <ul className="icon_list unordered_list_block">
@@ -27,7 +27,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-2 col-md-6">
+            <div className="col-6 col-lg-2 col-md-6">
               <div className="footer_widget">
                 <h3 className="footer_info_title">Pengetahuan</h3>
                 <ul className="icon_list unordered_list_block">
@@ -37,7 +37,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-2 col-md-6">
+            <div className="col-6 col-lg-2 col-md-6">
               <div className="footer_widget">
                 <h3 className="footer_info_title">Inovasi</h3>
                 <ul className="icon_list unordered_list_block">
@@ -53,9 +53,9 @@ const Footer = () => {
                 <p>{footer.newsletter.description}</p>
                 <form className="footer_newslatter_2" action="#">
                   <label htmlFor="footer_mail_input">
-                    <Image width={18} height={16} src="/images/icons/icon_mail_2.svg" alt="Mail SVG Icon" />
+                    <Image width={18} height={16} src="/images/icons/icon_mail_2.svg" alt="Mindkreativ Mail Icon" />
                   </label>
-                  <input id="footer_mail_input" type="email" name="email" placeholder="Enter your email" />
+                  <input id="footer_mail_input" type="email" name="email" placeholder="Email" />
                   <button type="submit">{footer.newsletter.buttonText}</button>
                 </form>
                 <ul className="social_icons_block unordered_list">
