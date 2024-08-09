@@ -37,7 +37,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-6 col-lg-2 col-md-6">
+            <div className="col-12 col-lg-2 col-md-6">
               <div className="footer_widget">
                 <h3 className="footer_info_title">Inovasi</h3>
                 <ul className="icon_list unordered_list_block">
