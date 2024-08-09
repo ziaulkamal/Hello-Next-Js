@@ -55,3 +55,9 @@
   padding-top: 300px;
   padding-bottom: 500px;
 }
+
+@media (max-width: 310px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
