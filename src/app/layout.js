@@ -17,13 +17,32 @@ import Preloader from './components/Preloader';
 import Heads from './components/Heads';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
-
 export const metadata = {
   title: 'Mindkreativ - Solusi Mitra Digital Anda',
   description: 'Mau buat aplikasi atau cari jasa kelola sosmed hingga scaleup brand ? Ya mindkreativ solusi nya!',
   charset: 'utf-8',
   keywords: 'Mindkreativ, Startup, Pembuatan Aplikasi Berkualitas, Mind Kreativ',
   author: 'Ziadev',
+  generator: 'medium',
+  robots: 'follow, index, max-snippet:large, max-video-preview:large, max-image-preview:large',
+  notable: 'index',
+  googlebot: 'index,follow',
+  GoogleProducer: 'index,follow',
+  GoogleOther: 'index,follow',
+  Bingbot: 'index,follow',
+  DuckDuckBot: 'index,follow',
+  Baidubot: 'index,follow',
+  Kakaobot: 'index,follow',
+  Yahoobot: 'index,follow',
+  Facebookbot: 'index,follow',
+  Yandexbot: 'index,follow',
+  Yeti: 'index,follow',
+  'DC.title': 'Lintas Service',
+  links: [
+    { href: process.env.NEXT_PUBLIC_API_URL, hreflang: 'x-default', rel: 'alternate' },
+    { href: process.env.NEXT_PUBLIC_API_URL, rel: 'openid.delegate' },
+    { href: process.env.NEXT_PUBLIC_API_URL, rel: 'canonical' }
+  ]
 };
 
 export const viewport = {

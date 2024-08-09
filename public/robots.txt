@@ -1,0 +1,8 @@
+# Allow all bots to crawl the entire site
+User-agent: *
+Disallow: /css
+Disallow: /fonts
+Disallow: /images
+Disallow: /js
+Allow: *
+
