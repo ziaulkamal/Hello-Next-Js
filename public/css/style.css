@@ -141,7 +141,9 @@ body {
   background-color: var(--bs-body-bg);
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased; 
+   overflow-x: hidden;
+}
 
 .page_wrapper {
   position: relative; }
