@@ -119,7 +119,7 @@ const AboutCase = () => {
                       </span>
                     </li>
                   </ul>
-                  <ul className="case_technologies unordered_list" data-text="Stack Digunakan: ">
+                  <ul className="case_technologies unordered_list" data-text="StackTech: ">
                     {caseStudy.technologies.map((tech, index) => (
                       <li key={index}>
                         <Image 

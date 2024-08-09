@@ -6,6 +6,8 @@ import '../../public/css/swiper-bundle.min.css';
 import '../../public/css/magnific-popup.min.css';
 import '../../public/css/odometer.min.css';
 import '../../public/css/style.css';
+
+import '../../styles/scss/style.scss';
 // import '../../public/css/style.css';
 import Footer from './components/Footer';
 import MyScript from './components/MyScript';
@@ -26,8 +28,8 @@ export const metadata = {
 
 export const viewport = {
   width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
+  initialScale: 1.0,
+  // maximumScale: 1,
   userScalable: false,
 };
 

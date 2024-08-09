@@ -1,110 +1,101 @@
-// ==================================================
-// * Project Name   :  Techco – IT Solutions & Technology, Business Consulting, Software Company Site Template
-// * File           :  JS Base
-// * Version        :  1.0.0
-// * Author         :  XpressBuddy (https://themeforest.net/user/xpressbuddy/portfolio)
-// * Developer      :  webrok (https://www.fiverr.com/webrok?up_rollout=true)
-// ==================================================
-
 (function($) {
   "use strict";
 
+  // Cache jQuery selectors
+  const $window = $(window);
+  const $document = $(document);
+  const $backToTop = $('.backtotop');
+  const $scroll = $(".scroll");
+  const $preloader = $('#preloader');
+  const $mobileMenuBtn = $(".mobile_menu_btn");
+  const $stricky = $('.stricky');
+  const $filterNav = $(".filter_elements_nav > ul > li");
+  const $odometer = jQuery('.odometer');
+  const $pricingToggleBtn = $(".pricing_toggle_btn > button");
+  const $videoBtn = $('.video_btn');
+  const $zoomGallery = $('.zoom-gallery');
+  const $parallaxie = $('.parallaxie');
+
   // Back To Top - Start
-  // --------------------------------------------------
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 200) {
-      $('.backtotop:hidden').stop(true, true).fadeIn();
+  $window.scroll(function() {
+    if ($window.scrollTop() > 200) {
+      $backToTop.stop(true, true).fadeIn();
     } else {
-      $('.backtotop').stop(true, true).fadeOut();
+      $backToTop.stop(true, true).fadeOut();
     }
   });
-  $(".scroll").on('click', function() {
+
+  $scroll.on('click', function() {
     $("html, body").animate({scrollTop: 0}, 0);
-    return false; 
+    return false;
   });
   // Back To Top - End
-  // --------------------------------------------------
 
-  // preloader - start
-  // --------------------------------------------------
-  $(window).on('load', function(){
-    $('#preloader').fadeOut('slow',function(){
+  // Preloader - Start
+  $window.on('load', function(){
+    $preloader.fadeOut('slow', function(){
       $(this).remove();
     });
   });
-  // preloader - end
-  // --------------------------------------------------
+  // Preloader - End
 
-  // Mobile Menu Button Class Chnage - Start
-  // --------------------------------------------------
-  $(".mobile_menu_btn").on('click', function(){
-    $(".mobile_menu_btn > i").toggleClass("far fa-bars fa-solid fa-xmark");
+  // Mobile Menu Button Class Change - Start
+  $mobileMenuBtn.on('click', function(){
+    $mobileMenuBtn.find('i').toggleClass("far fa-bars fa-solid fa-xmark");
   });
-  // Mobile Menu Button Class Chnage - End
-  // --------------------------------------------------
+  // Mobile Menu Button Class Change - End
 
   // Sticky Header - Start
-  // --------------------------------------------------
-  if ($('.stricky').length) {
-    $('.stricky').addClass('original').clone(true).insertAfter('.stricky').addClass('stricked-menu').removeClass('original');
+  if ($stricky.length) {
+    $stricky.addClass('original').clone(true).insertAfter($stricky).addClass('stricked-menu').removeClass('original');
   }
-  $(window).on('scroll', function () {
-      if ($('.stricked-menu').length) {
-          var headerScrollPos = 150;
-          var stricky = $('.stricked-menu');
-          if ($(window).scrollTop() > headerScrollPos) {
-              stricky.addClass('stricky-fixed');
-          } else if ($(this).scrollTop() <= headerScrollPos) {
-              stricky.removeClass('stricky-fixed');
-          }
+
+  $window.on('scroll', function () {
+    if ($('.stricked-menu').length) {
+      const headerScrollPos = 150;
+      const $strickedMenu = $('.stricked-menu');
+      if ($window.scrollTop() > headerScrollPos) {
+        $strickedMenu.addClass('stricky-fixed');
+      } else {
+        $strickedMenu.removeClass('stricky-fixed');
       }
-
-  });
-
-  // Sticky Header - End
-  // --------------------------------------------------
-
-  // Filter Elements - Start
-  // --------------------------------------------------
-  $(".filter_elements_nav > ul > li").click(function(){
-    var filterValue = $(this).attr('data-filter');
-    if(filterValue == "all") {
-      $(".filter_elements_wrapper > div").show();
-    } else {
-      $(".filter_elements_wrapper > div").not('.' + filterValue).hide();
-      $(".filter_elements_wrapper > div").filter('.' + filterValue).show();
     }
   });
-  $(".filter_elements_nav > ul > li").on("click", function() {
-    $(this).addClass("active").siblings().removeClass("active");
+  // Sticky Header - End
+
+  // Filter Elements - Start
+  $filterNav.click(function(){
+    const filterValue = $(this).data('filter');
+    if (filterValue === "all") {
+      $(".filter_elements_wrapper > div").show();
+    } else {
+      $(".filter_elements_wrapper > div").each(function() {
+        $(this).toggleClass('hidden', !$(this).hasClass(filterValue));
+      });
+    }
+    $filterNav.removeClass('active');
+    $(this).addClass('active');
   });
   // Filter Elements - End
-  // --------------------------------------------------
 
   // Odometer Counter - Start
-  // --------------------------------------------------
-  jQuery('.odometer').appear(function (e) {
-    var odo = jQuery(".odometer");
-    odo.each(function () {
-      var countNumber = jQuery(this).attr("data-count");
-      jQuery(this).html(countNumber);
+  $odometer.appear(function () {
+    $odometer.each(function () {
+      const countNumber = $(this).data("count");
+      $(this).html(countNumber);
     });
   });
   // Odometer Counter - End
-  // --------------------------------------------------
 
   // Pricing Toggle Button - Start
-  // --------------------------------------------------
-  $(".pricing_toggle_btn > button").on('click', function(){
+  $pricingToggleBtn.on('click', function(){
     $(this).toggleClass("active");
     $(".pricing_block").toggleClass("active");
   });
   // Pricing Toggle Button - End
-  // --------------------------------------------------
 
-  // Videos & Images popup - Start
-  // --------------------------------------------------
-  $('.video_btn').magnificPopup({
+  // Videos & Images Popup - Start
+  $videoBtn.magnificPopup({
     type: 'iframe',
     preloader: false,
     removalDelay: 160,
@@ -112,42 +103,31 @@
     fixedContentPos: false
   });
 
-  $('.zoom-gallery').magnificPopup({
+  $zoomGallery.magnificPopup({
     delegate: '.popup_image',
     type: 'image',
     closeOnContentClick: false,
     closeBtnInside: false,
     mainClass: 'mfp-with-zoom mfp-img-mobile',
-    gallery: {
-      enabled: true
-    },
+    gallery: { enabled: true },
     zoom: {
       enabled: true,
       duration: 300,
-      opener: function(element) {
-        return element.find('img');
-      }
+      opener: function(element) { return element.find('img'); }
     }
-    
   });
-  // Videos & Images popup - End
-  // --------------------------------------------------
+  // Videos & Images Popup - End
 
   // Wow JS - Start
-  // --------------------------------------------------
-  var wow = new WOW({
+  new WOW({
     animateClass: 'animated',
     offset: 100,
     mobile: true,
     duration: 1000,
-  });
-  wow.init();
+  }).init();
   // Wow JS - End
-  // --------------------------------------------------
 
   // Progress Bar - Start
-  // --------------------------------------------------
-  // Business Growth Circle Progress
   const bgGlobalProgress = {
     index: 58,
     speed: 100,
@@ -155,190 +135,118 @@
     strokeBottom: 5,
     colorSlice: "#FF6D00",
     colorCircle: "#f1f1f1",
-  }
-  const bgCircle = new CircularProgressBar("business_growth", bgGlobalProgress);
-  bgCircle.initial();
+  };
+  new CircularProgressBar("business_growth", bgGlobalProgress).initial();
   // Progress Bar - End
-  // --------------------------------------------------
-  
+
   // Background Parallax - Start
-  // --------------------------------------------------
-  $('.parallaxie').parallaxie({
+  $parallaxie.parallaxie({
     speed: 0.5,
     offset: 0,
   });
   // Background Parallax - End
-  // --------------------------------------------------
 
-  // Client Logo Carousel - Start
-  // --------------------------------------------------
-  var swiperClientLogo = new Swiper(".client_logo_carousel", {
+  // Swiper Initializations
+  function initSwiper(selector, config) {
+    return new Swiper(selector, config);
+  }
+
+  // Client Logo Carousel
+  initSwiper(".client_logo_carousel", {
     loop: true,
     speed: 2000,
     freeMode: true,
     centeredSlides: true,
     allowTouchMove: true,
-    autoplay: {
-      delay: 1,
-      disableOnInteraction: true,
-    },
+    autoplay: { delay: 1, disableOnInteraction: true },
     breakpoints: {
-      376: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      1025: {
-        slidesPerView: 7,
-      },
-    },
+      376: { slidesPerView: 2 },
+      768: { slidesPerView: 4 },
+      1025: { slidesPerView: 7 },
+    }
   });
-  // Client Logo Carousel - End
-  // --------------------------------------------------
 
-  // Portfolio Carousel - Start
-  // --------------------------------------------------
-  var swiperPortfolio = new Swiper(".portfolio_carousel", {
+  // Portfolio Carousel
+  initSwiper(".portfolio_carousel", {
     loop: true,
     speed: 400,
     spaceBetween: 30,
     allowTouchMove: true,
     centeredSlides: true,
-    pagination: {
-      el: ".portfolio-swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      1025: {
-        slidesPerView: 2,
-      },
-    },
+    pagination: { el: ".portfolio-swiper-pagination", clickable: true },
+    breakpoints: { 1025: { slidesPerView: 2 } }
   });
-  // Portfolio Carousel - End
-  // --------------------------------------------------
 
-  // Team Carousel - Start
-  // --------------------------------------------------
-  var swiperTeam = new Swiper(".team_carousel", {
+  // Team Carousel
+  initSwiper(".team_carousel", {
     loop: true,
     speed: 800,
-    spaceBetween: 30,
+    spaceBetween: 10,
     allowTouchMove: true,
     centeredSlides: true,
-    pagination: {
-      el: ".team-swiper-pagination",
-      clickable: true,
-    },
+    pagination: { el: ".team-swiper-pagination", clickable: true },
     breakpoints: {
-      576: {
-        slidesPerView: 2,
-      },
-      1025: {
-        slidesPerView: 3,
-      },
-    },
+      576: { slidesPerView: 5 },
+      1025: { slidesPerView: 3 },
+    }
   });
-  // Team Carousel - End
-  // --------------------------------------------------
 
-  // Blog 1 Col Carousel - Start
-  // --------------------------------------------------
-  var blogOneColCarousel = new Swiper(".blog_onecol_carousel", {
+  // Blog 1 Col Carousel
+  initSwiper(".blog_onecol_carousel", {
     loop: true,
     speed: 1000,
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
       nextEl: ".b1cc-swiper-button-next",
-      prevEl: ".b1cc-swiper-button-prev",
+      prevEl: ".b1cc-swiper-button-prev"
     },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: true,
-    },
-    pagination: {
-      el: ".b1cc-swiper-pagination",
-      clickable: true,
-    },
+    autoplay: { delay: 4000, disableOnInteraction: true },
+    pagination: { el: ".b1cc-swiper-pagination", clickable: true }
   });
-  // Blog 1 Col Carousel - End
-  // --------------------------------------------------
 
-  // Review 1 Col Carousel - Start
-  // --------------------------------------------------
-  var reviewOneColCarousel = new Swiper(".review_onecol_carousel", {
+  // Review 1 Col Carousel
+  initSwiper(".review_onecol_carousel", {
     loop: true,
     speed: 1000,
     slidesPerView: 1,
     spaceBetween: 50,
     navigation: {
       nextEl: ".r1cc-swiper-button-next",
-      prevEl: ".r1cc-swiper-button-prev",
+      prevEl: ".r1cc-swiper-button-prev"
     },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: true,
-    },
+    autoplay: { delay: 4000, disableOnInteraction: true }
   });
-  // Review 1 Col Carousel - End
-  // --------------------------------------------------
 
-  // Service Pill Carousel - Start
-  // --------------------------------------------------
-  var servicePillCarousel = new Swiper(".service_pill_carousel", {
+  // Service Pill Carousel
+  initSwiper(".service_pill_carousel", {
     loop: true,
     speed: 4000,
     spaceBetween: 20,
     navigation: {
       nextEl: ".spc-swiper-button-next",
-      prevEl: ".spc-swiper-button-prev",
+      prevEl: ".spc-swiper-button-prev"
     },
-    autoplay: {
-      delay: 1,
-      disableOnInteraction: true,
-    },
+    autoplay: { delay: 1, disableOnInteraction: true },
     breakpoints: {
-      321: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-      1025: {
-        slidesPerView: 4,
-      },
-      1200: {
-        slidesPerView: 5,
-      },
-    },
+      321: { slidesPerView: 2 },
+      992: { slidesPerView: 3 },
+      1025: { slidesPerView: 4 },
+      1200: { slidesPerView: 5 },
+    }
   });
-  // Service Pill Carousel - End
-  // --------------------------------------------------
 
-  // Service Pill Carousel - Start
-  // --------------------------------------------------
-  var review4ColCarousel = new Swiper(".review_4col_carousel", {
+  // Review 4 Col Carousel
+  initSwiper(".review_4col_carousel", {
     loop: true,
     speed: 1000,
     spaceBetween: 20,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-    },
+    autoplay: { delay: 3000, disableOnInteraction: true },
     breakpoints: {
-      576: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-    },
+      576: { slidesPerView: 2 },
+      992: { slidesPerView: 3 },
+      1200: { slidesPerView: 4 },
+    }
   });
-  // Service Pill Carousel - End
-  // --------------------------------------------------
 
 })(jQuery);
