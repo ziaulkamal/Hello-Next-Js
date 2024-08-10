@@ -5,4 +5,5 @@ Disallow: /fonts
 Disallow: /images
 Disallow: /js
 Allow: *
+Allow: /api/og/*
 
