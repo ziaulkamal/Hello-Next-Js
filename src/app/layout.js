@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <link rel="manifest" href="/manifest.json" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" sizes="any"/>
       <body suppressHydrationWarning={true}>
         <div className="backtotop">
             <Link href="#" className="scroll">

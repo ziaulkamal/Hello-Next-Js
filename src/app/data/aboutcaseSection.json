@@ -11,7 +11,7 @@
   "caseStudies": [
     {
       "image": {
-        "src": "/images/case/case_image_1.webp",
+        "src": "/images/clients/sizakki_abdya.svg",
         "alt": "Mindkreativ",
         "width": 465,
         "height": 502
@@ -45,22 +45,22 @@
     },
     {
       "image": {
-        "src": "/images/case/case_image_2.webp",
+        "src": "/images/clients/rsud_singkil.svg",
         "alt": "Mindkreativ",
         "width": 465,
         "height": 502
       },
       "categories": [
         {
-          "name": "Website Landing Page",
+          "name": "Website Media",
           "link": "#!"
         }
       ],
-      "title": "KFCakes Baking Class",
+      "title": "Website Instansi Media",
       "titleLink": "#!",
-      "description": "Website yang menyajikan katalog produk yang dimana untuk kebutuhan Meta Ads untuk menargetkan konsumen dalam jangkauan tertentu",
-      "industry": "Website UMKM",
-      "country": "Banda Aceh",
+      "description": "Website yang menyajikan informasi terkait berita dan layananan dari rumah sakit",
+      "industry": "Website Instanasi",
+      "country": "Aceh Singkil",
       "technologies": [
         {
           "src": "/images/icons/wordpress.png",

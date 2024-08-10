@@ -124,10 +124,10 @@ const Heads = () => {
                                     <div className="author_box">
                                       <div className="author_image bg-light">
                                         <Image
-                                          width={1320}
-                                          height={1520}
+                                          width={1600}
+                                          height={1600}
                                           src={author.image}
-                                          alt="Site Author Image"
+                                          alt="Mindkreativ CEO"
                                         />
                                       </div>
                                       <div className="author_box_content">
@@ -143,7 +143,7 @@ const Heads = () => {
                                           width={120}
                                           height={98}
                                           src={author.quoteIcon}
-                                          alt="Quote Icon"
+                                          alt="MindKreativ CEO"
                                         />
                                       </div>
                                     </div>
