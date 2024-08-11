@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import googleTrendsClient from '../../lib/googleTrendsClient';
+import googleTrendsClient from '@/app/lib/googleTrendsClient';
 
 export async function GET(request) {
   const url = new URL(request.url);
