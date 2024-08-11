@@ -1,0 +1,114 @@
+/* styles/Table.module.css */
+
+/* Container for badges */
+.badgesContainer {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Individual badge button */
+.badgeButton {
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.badgeButton:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Container for controls (search and geo selector) */
+.controlsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Geo select container */
+.geoSelectContainer {
+  flex: 1;
+  max-width: 200px;
+}
+
+.geoSelect {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Search input container */
+.searchContainer {
+  flex: 2;
+  max-width: 300px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Table styling */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f8f9fa; /* Light gray background */
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Pagination controls */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.activePage {
+  background-color: #0056b3;
+}
