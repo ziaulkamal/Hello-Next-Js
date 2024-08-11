@@ -1,114 +1,128 @@
-/* styles/Table.module.css */
+/* styles/ArticleList.module.css */
 
 /* Container for badges */
 .badgesContainer {
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
-/* Individual badge button */
-.badgeButton {
-  background-color: #007bff; /* Bootstrap primary color */
-  border: none;
-  color: white;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 14px;
+/* Style for badge buttons using Bootstrap */
+.badge {
+  background-color: #020842; /* Background color for badges */
+  color: #ffffff; /* Text color for badges */
+  border: 2px solid #020842; /* Border color matching background */
+  border-radius: 20px; /* Rounded corners for badges */
+  padding: 8px 16px; /* Padding for badge */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 14px;
+  max-width: 200px; /* Max width for badge */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  display: inline-block; /* Ensure correct alignment */
+  transition: all 0.3s ease;
+  font-weight: 500; /* Slightly bold text */
 }
 
-.badgeButton:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+/* Hover effect for badge buttons */
+.badge:hover {
+  background-color: #003366; /* Darker background color on hover */
+  border-color: #003366; /* Border color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow effect */
 }
 
-/* Container for controls (search and geo selector) */
+/* Focus effect for badge buttons */
+.badge:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 58, 113, 0.5); /* Outline for accessibility */
+}
+
+/* Container for geo selector and search input */
 .controlsContainer {
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
 }
 
-/* Geo select container */
+/* Style for geo selector */
 .geoSelectContainer {
   flex: 1;
-  max-width: 200px;
+  margin-right: 10px;
 }
 
+/* Geo selector styling */
 .geoSelect {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
 }
 
-/* Search input container */
+/* Style for search input */
 .searchContainer {
   flex: 2;
-  max-width: 300px;
 }
 
+/* Search input styling */
 .searchInput {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
 }
 
-/* Table styling */
-.tableContainer {
-  overflow-x: auto;
+/* Container for articles */
+.articlesContainer {
+  margin-top: 20px;
 }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
+/* Style for article images */
+.articleImage {
+  width: 312px;
+  height: 336px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.table th, .table td {
-  padding: 15px;
-  text-align: left;
-}
-
-.table th {
-  background-color: #f8f9fa; /* Light gray background */
-  border-bottom: 2px solid #dee2e6;
-}
-
-.table td {
-  border-bottom: 1px solid #dee2e6;
-}
-
-.table img {
-  max-width: 100px;
-  height: auto;
-  border-radius: 4px;
-}
-
-/* Pagination controls */
+/* Pagination controls styling */
 .pagination {
   margin-top: 20px;
   display: flex;
+  gap: 8px;
   justify-content: center;
-  gap: 5px;
 }
 
+/* Style for pagination buttons */
 .pagination button {
-  background-color: #007bff;
-  border: none;
+  background-color: #020842;
   color: white;
-  padding: 10px 15px;
+  border: none;
   border-radius: 4px;
+  padding: 8px 16px;
   cursor: pointer;
+  font-size: 14px;
   transition: background-color 0.3s ease;
 }
 
-.pagination button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+/* Active page button styling */
+.activePage {
+  background-color: #003366;
 }
 
-.activePage {
-  background-color: #0056b3;
+/* Pagination button hover effect */
+.pagination button:hover {
+  background-color: #003366;
+}
+
+/* Style for dark buttons */
+.btn-dark {
+  background-color: #020842;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dark buttons */
+.btn-dark:hover {
+  background-color: #003366;
 }
