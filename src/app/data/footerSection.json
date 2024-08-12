@@ -14,7 +14,7 @@
       { "name": "Synthesia", "link": "#!" },
       { "name": "Github", "link": "#!" },
       { "name": "Midjourney", "link": "#!" },
-      { "name": "Grammarly", "link": "#!" }
+      { "name": "Google Trends", "link": "/trends" }
     ],
     "industries": [
       { "name": "Keuangan", "link": "#!" },
