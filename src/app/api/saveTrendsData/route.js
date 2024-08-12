@@ -8,7 +8,30 @@ export async function POST(req) {
       throw new Error('Expected an array of items.');
     }
 
+    // Extract titles to check for existing records
+    const titles = items.map(item => item.title);
+
+    // Check existing records in Supabase
+    const { data: existingRecords, error: fetchError } = await supabase
+      .from('googletrend')
+      .select('title')
+      .in('title', titles);
+
+    if (fetchError) {
+      console.error('Error fetching existing records:', fetchError.message);
+      throw fetchError;
+    }
+
+    // Create a set of existing titles for quick lookup
+    const existingTitles = new Set(existingRecords.map(record => record.title));
+
     for (const item of items) {
+      if (existingTitles.has(item.title)) {
+        // Skip items that already exist
+        console.log(`Skipping item with title: ${item.title}`);
+        continue;
+      }
+
       const formattedItem = {
         title: item.title,
         url: item.url,
@@ -18,13 +41,13 @@ export async function POST(req) {
         ai_process: false
       };
 
-      const { error } = await supabase
+      const { error: upsertError } = await supabase
         .from('googletrend')
         .upsert(formattedItem, { onConflict: ['title'] });
 
-      if (error) {
-        console.error('Supabase error:', error.message);
-        throw error;
+      if (upsertError) {
+        console.error('Supabase error:', upsertError.message);
+        throw upsertError;
       }
 
       // Add delay between inserts to avoid hitting rate limits
