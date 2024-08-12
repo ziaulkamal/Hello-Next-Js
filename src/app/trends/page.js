@@ -75,12 +75,11 @@ const TrendPage = () => {
   const [articles, setArticles] = useState([]);
   const [search, setSearch] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(10); // Number of items per page
+  const [itemsPerPage] = useState(10);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedGeo, setSelectedGeo] = useState('US');
 
-  // Fetch data from API based on selected geo
   const fetchData = async (geo) => {
     try {
       setLoading(true);
@@ -88,9 +87,11 @@ const TrendPage = () => {
       const searches = response.data.default.trendingSearchesDays.flatMap(day => day.trendingSearches);
       setTrendingSearches(searches);
       const allArticles = searches.flatMap(search => search.articles || []);
+      
+      // Set articles and save data to Supabase afterward
       setArticles(allArticles);
-      setCurrentPage(1); // Reset to first page when new data is loaded
     } catch (err) {
+      console.error('Error:', err.message);
       setError(err.message);
     } finally {
       setLoading(false);
@@ -101,7 +102,26 @@ const TrendPage = () => {
     fetchData(selectedGeo);
   }, [selectedGeo]);
 
-  // Handle badge click
+  useEffect(() => {
+    if (articles.length > 0) {
+      const saveDataToSupabase = async () => {
+        try {
+          const apiResponse = await axios.post('/api/saveTrendsData', articles, {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+          console.log('Data save response:', apiResponse.data);
+        } catch (err) {
+          console.error('Error saving data:', err.message);
+          setError(err.message);
+        }
+      };
+
+      saveDataToSupabase();
+    }
+  }, [articles]);
+
   const handleBadgeClick = async (query) => {
     try {
       setLoading(true);
@@ -109,26 +129,24 @@ const TrendPage = () => {
       const newTrendingSearches = response.data.default.trendingSearchesDays.flatMap(day => day.trendingSearches);
       setTrendingSearches(newTrendingSearches);
       const newArticles = newTrendingSearches.flatMap(search => search.articles || []);
+      
+      // Set articles and save data to Supabase afterward
       setArticles(newArticles);
-      setCurrentPage(1); // Reset to first page when new data is loaded
     } catch (err) {
+      console.error('Error:', err.message);
       setError(err.message);
     } finally {
       setLoading(false);
     }
   };
 
-  // Filter articles based on search input
   const filteredArticles = articles.filter(article =>
     article.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  // Handle page change
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-
-
 
   return (
     <>

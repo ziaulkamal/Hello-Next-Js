@@ -70,170 +70,170 @@ const geoOptions = [
 ];
 
 
-const Trends = ({
-  trendingSearches,
-  articles,
-  onBadgeClick,
-  search,
-  onSearchChange,
-  isLoading,
-  currentPage,
-  itemsPerPage,
-  onPageChange,
-  selectedGeo,
-  onGeoChange
-}) => {
-  // Limit badges to 20
-  const limitedBadges = trendingSearches.flatMap(item => item.relatedQueries).slice(0, 20);
+    const Trends = ({
+    trendingSearches,
+    articles,
+    onBadgeClick,
+    search,
+    onSearchChange,
+    isLoading,
+    currentPage,
+    itemsPerPage,
+    onPageChange,
+    selectedGeo,
+    onGeoChange
+    }) => {
+    // Limit badges to 20
+    const limitedBadges = trendingSearches.flatMap(item => item.relatedQueries).slice(0, 20);
 
-  // Filter articles based on search query
-  const filteredArticles = articles.filter(article =>
-    he.decode(article.title).toLowerCase().includes(search.toLowerCase()) ||
-    (article.snippet && he.decode(article.snippet).toLowerCase().includes(search.toLowerCase()))
-  );
+    // Filter articles based on search query
+    const filteredArticles = articles.filter(article =>
+        he.decode(article.title).toLowerCase().includes(search.toLowerCase()) ||
+        (article.snippet && he.decode(article.snippet).toLowerCase().includes(search.toLowerCase()))
+    );
 
-  // Pagination calculations
-  const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
-  const currentArticles = filteredArticles.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+    // Pagination calculations
+    const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
+    const currentArticles = filteredArticles.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
-  return (
-    <>
+    return (
+        <>
 
-      <section className="blog_details_section section_space bg-light">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-12">
-              {/* Badge Buttons */}
-              <div className={styles.badgesContainer}>
-                {limitedBadges.map((query, index) => (
-                  <span
-                    key={index}
-                    onClick={() => onBadgeClick(query.query)}
-                    className={`badge ${styles.badge}`}
-                  >
-                    {he.decode(query.query)}
-                  </span>
-                ))}
-              </div>
-
-              {/* Controls Container */}
-              <div className={styles.controlsContainer}>
-                {/* Geo Selector */}
-                <div className={styles.geoSelectContainer}>
-                  <select 
-                    value={selectedGeo} 
-                    onChange={(e) => onGeoChange(e.target.value)} 
-                    className={`form-select ${styles.geoSelect}`}
-                  >
-                    {geoOptions.map((geo, index) => (
-                      <option key={index} value={geo.value}>
-                        {geo.label}
-                      </option>
+        <section className="blog_details_section section_space bg-light">
+            <div className="container">
+            <div className="row align-items-center">
+                <div className="col-md-12">
+                {/* Badge Buttons */}
+                <div className={styles.badgesContainer}>
+                    {limitedBadges.map((query, index) => (
+                    <span
+                        key={index}
+                        onClick={() => onBadgeClick(query.query)}
+                        className={`badge ${styles.badge}`}
+                    >
+                        {he.decode(query.query)}
+                    </span>
                     ))}
-                  </select>
                 </div>
 
-                {/* Search Input */}
-                <div className={styles.searchContainer}>
-                  <input
-                    type="text"
-                    placeholder="Search articles..."
-                    value={search}
-                    onChange={(e) => onSearchChange(e.target.value)}
-                    className={`form-control ${styles.searchInput}`}
-                  />
-                </div>
-              </div>
+                {/* Controls Container */}
+                <div className={styles.controlsContainer}>
+                    {/* Geo Selector */}
+                    <div className={styles.geoSelectContainer}>
+                    <select 
+                        value={selectedGeo} 
+                        onChange={(e) => onGeoChange(e.target.value)} 
+                        className={`form-select ${styles.geoSelect}`}
+                    >
+                        {geoOptions.map((geo, index) => (
+                        <option key={index} value={geo.value}>
+                            {geo.label}
+                        </option>
+                        ))}
+                    </select>
+                    </div>
 
-              {/* Articles Display */}
-              <div className={styles.articlesContainer}>
-                {isLoading ? (
-                  <p>Loading...</p>
-                ) : (
-                  currentArticles.map((article, index) => (
-                    <div key={index} className="blog_post_block image_left_layout">
-                      <div className="blog_post_image">
-                        {article.image ? (
-                          <a 
-                            className="image_wrap" 
+                    {/* Search Input */}
+                    <div className={styles.searchContainer}>
+                    <input
+                        type="text"
+                        placeholder="Search articles..."
+                        value={search}
+                        onChange={(e) => onSearchChange(e.target.value)}
+                        className={`form-control ${styles.searchInput}`}
+                    />
+                    </div>
+                </div>
+
+                {/* Articles Display */}
+                <div className={styles.articlesContainer}>
+                    {isLoading ? (
+                    <p>Loading...</p>
+                    ) : (
+                    currentArticles.map((article, index) => (
+                        <div key={index} className="blog_post_block image_left_layout">
+                        <div className="blog_post_image">
+                            {article.image ? (
+                            <a 
+                                className="image_wrap" 
+                                href={article.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                            >
+                                <Image 
+                                src={article.image.imageUrl} 
+                                alt={article.title} 
+                                width={312} 
+                                height={336} 
+                                className={styles.articleImage} 
+                                />
+                            </a>
+                            ) : null}
+                        </div>
+                        <div className="blog_post_content">
+                            <div className="post_meta_wrap">
+                            <ul className="category_btns_group unordered_list">
+                                <li><a href="#!">Technology</a></li>
+                            </ul>
+                            <ul className="post_meta unordered_list">
+                                <li>
+                                <a href="#!">
+                                    <Image 
+                                    src="/images/icons/icon_calendar.svg" 
+                                    alt="Icon Calendar" 
+                                    width={16} 
+                                    height={16} 
+                                    /> {article.timeAgo || 'No Time Ago'}
+                                </a>
+                                </li>
+                                <li>
+                                <a href="#!"><i className="fa-regular fa-comment-lines"></i> 24</a>
+                                </li>
+                            </ul>
+                            </div>
+                            <h3 className="blog_post_title">
+                            <a href={article.url} target="_blank" rel="noopener noreferrer">
+                                {he.decode(article.title) || 'No Title'}
+                            </a>
+                            </h3>
+                            <p>
+                            {he.decode(article.snippet) || 'No Description Available'}
+                            </p>
+                            <a 
+                            className="btn btn-dark" 
                             href={article.url} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                          >
-                            <Image 
-                              src={article.image.imageUrl} 
-                              alt={article.title} 
-                              width={312} 
-                              height={336} 
-                              className={styles.articleImage} 
-                            />
-                          </a>
-                        ) : null}
-                      </div>
-                      <div className="blog_post_content">
-                        <div className="post_meta_wrap">
-                          <ul className="category_btns_group unordered_list">
-                            <li><a href="#!">Technology</a></li>
-                          </ul>
-                          <ul className="post_meta unordered_list">
-                            <li>
-                              <a href="#!">
-                                <Image 
-                                  src="/images/icons/icon_calendar.svg" 
-                                  alt="Icon Calendar" 
-                                  width={16} 
-                                  height={16} 
-                                /> {article.timeAgo || 'No Time Ago'}
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#!"><i className="fa-regular fa-comment-lines"></i> 24</a>
-                            </li>
-                          </ul>
+                            >
+                            <span className="btn_label" data-text="Read More">Read More</span>
+                            <span className="btn_icon">
+                                <i className="fa-solid fa-arrow-up-right"></i>
+                            </span>
+                            </a>
                         </div>
-                        <h3 className="blog_post_title">
-                          <a href={article.url} target="_blank" rel="noopener noreferrer">
-                            {he.decode(article.title) || 'No Title'}
-                          </a>
-                        </h3>
-                        <p>
-                          {he.decode(article.snippet) || 'No Description Available'}
-                        </p>
-                        <a 
-                          className="btn btn-dark" 
-                          href={article.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
+                        </div>
+                    ))
+                    )}
+
+                    {/* Pagination Controls */}
+                    <div className={styles.pagination}>
+                    {Array.from({ length: totalPages }, (_, index) => (
+                        <button
+                        key={index + 1}
+                        onClick={() => onPageChange(index + 1)}
+                        className={`btn ${currentPage === index + 1 ? styles.activePage : ''}`}
                         >
-                          <span className="btn_label" data-text="Read More">Read More</span>
-                          <span className="btn_icon">
-                            <i className="fa-solid fa-arrow-up-right"></i>
-                          </span>
-                        </a>
-                      </div>
+                        {index + 1}
+                        </button>
+                    ))}
                     </div>
-                  ))
-                )}
-
-                {/* Pagination Controls */}
-                <div className={styles.pagination}>
-                  {Array.from({ length: totalPages }, (_, index) => (
-                    <button
-                      key={index + 1}
-                      onClick={() => onPageChange(index + 1)}
-                      className={`btn ${currentPage === index + 1 ? styles.activePage : ''}`}
-                    >
-                      {index + 1}
-                    </button>
-                  ))}
                 </div>
-              </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
+            </div>
+        </section>
+        </>
+    );
+    };
 
-export default Trends;
+    export default Trends;
