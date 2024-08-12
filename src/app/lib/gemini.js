@@ -82,7 +82,7 @@ async function generateSessionDataWithRetry(prompt, lang, tone, sessionType, ret
     let sessionPrompt;
     switch (sessionType) {
         case 1:
-            sessionPrompt = `Create a JSON object with the following structure for an article about ${prompt}: { "title": "make unique good title and SEO friendly with max character 160", "slug": "a-slug-for-the-title" }. only get object without include opening and say thats a json, long of title must be 140 character`;
+            sessionPrompt = `Create a JSON object with the following structure for an article about ${prompt}: { "title": "create new title, and use ${lang} ", "slug": "a-slug-for-the-title" }. only get object without include opening and say thats a json, long of title must be 140 character`;
             break;
         case 2:
             sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h1> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H1: Should clearly define the article’s main topic." }. only get object without include opening and say thats a json`;
