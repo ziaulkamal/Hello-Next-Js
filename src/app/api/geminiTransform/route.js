@@ -1,8 +1,6 @@
-// src/app/api/geminiTransform/route.js
-
 import supabase from '@/app/lib/supabaseClient';
-import { decode } from 'html-entities'; // Import the decode function
-import axios from 'axios'; // Import axios
+import { decode } from 'html-entities';
+import axios from 'axios';
 
 export async function GET() {
   try {
@@ -48,8 +46,12 @@ export async function GET() {
     // Remove trailing spaces and dots
     title = title.replace(/[\s.]+$/, '');
 
+    // Add a timestamp parameter to the URL to ensure it's unique
+    const timestamp = Date.now(); // or use a UUID if you prefer
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/gemini?timestamp=${timestamp}`;
+
     // Construct the request to the /api/gemini endpoint using axios
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/gemini`, {
+    const response = await axios.get(apiUrl, {
       params: { prompt: title },
     });
 
