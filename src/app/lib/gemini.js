@@ -55,7 +55,7 @@ async function callGeminiAPI(prompt) {
 }
 
 // Retry mechanism
-async function retryFunction(fn, retries = 3, delay = 2000) {
+async function retryFunction(fn, retries = 1, delay = 500) {
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             return await fn();
@@ -75,7 +75,7 @@ function sleep(ms) {
 }
 
 // Function to generate session data with retry
-async function generateSessionDataWithRetry(prompt, lang, tone, sessionType, retries = 3) {
+async function generateSessionDataWithRetry(prompt, lang, tone, sessionType, retries = 1) {
     let sessionPrompt;
     switch (sessionType) {
         case 1:
