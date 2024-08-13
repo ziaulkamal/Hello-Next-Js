@@ -44,6 +44,15 @@
           "value": "no-store"
         }
       ]
+    },
+    {
+      "source": "/api/gemini",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
     }
   ]
 }
