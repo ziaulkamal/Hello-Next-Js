@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/api/geminiTransform",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ]
+}
