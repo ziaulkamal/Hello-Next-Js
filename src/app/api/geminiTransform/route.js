@@ -1,3 +1,5 @@
+// /src/app/api/geminiTransform/route.js
+
 import supabase from '@/app/lib/supabaseClient';
 import { decode } from 'html-entities';
 import axios from 'axios';
@@ -17,7 +19,7 @@ export async function GET() {
           'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
           'Pragma': 'no-cache',
           'Expires': '0',
-        }
+        },
       });
     }
 
@@ -28,7 +30,7 @@ export async function GET() {
           'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
           'Pragma': 'no-cache',
           'Expires': '0',
-        }
+        },
       });
     }
 
@@ -46,16 +48,9 @@ export async function GET() {
     // Remove trailing spaces and dots
     title = title.replace(/[\s.]+$/, '');
 
-    // Add a timestamp parameter to the URL to ensure it's unique
-    const timestamp = Date.now(); // or use a UUID if you prefer
-    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/gemini?timestamp=${timestamp}`;
+    // Construct the request to the dynamic route /api/gemini/[param] using axios
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/gemini/${encodeURIComponent(title)}`);
 
-    // Construct the request to the /api/gemini endpoint using axios
-    const response = await axios.get(apiUrl, {
-      params: { prompt: title },
-    });
-
-    // Axios response handling
     if (response.status !== 200) {
       return new Response(JSON.stringify({ error: response.statusText }), {
         status: response.status,
@@ -63,7 +58,7 @@ export async function GET() {
           'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
           'Pragma': 'no-cache',
           'Expires': '0',
-        }
+        },
       });
     }
 
@@ -82,7 +77,7 @@ export async function GET() {
           'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
           'Pragma': 'no-cache',
           'Expires': '0',
-        }
+        },
       });
     }
 
@@ -92,7 +87,7 @@ export async function GET() {
         'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
         'Pragma': 'no-cache',
         'Expires': '0',
-      }
+      },
     });
   } catch (error) {
     console.error('Unexpected Error:', error);
@@ -102,7 +97,7 @@ export async function GET() {
         'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
         'Pragma': 'no-cache',
         'Expires': '0',
-      }
+      },
     });
   }
 }
