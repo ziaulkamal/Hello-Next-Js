@@ -1,7 +1,5 @@
 import { formatAndSaveData } from '@/app/lib/formatAndSave'; // Pastikan path yang benar
 import { generateSessionDataWithRetry, formatSessionData, stringToSlug } from '@/app/lib/gemini';
-import fs from 'fs';
-import path from 'path';
 
 export async function GET(req) {
     try {
@@ -16,30 +14,18 @@ export async function GET(req) {
         }
 
         const langCode = `${lang}_${lang}`;
-        const filePath = path.join(process.cwd(), 'public', 'gemini_result', `${stringToSlug(prompt)}.json`);
+        const results = {};
 
-        // Periksa apakah file sudah ada
-        if (fs.existsSync(filePath)) {
-            console.log(`File ${filePath} already exists. Skipping data generation.`);
-        } else {
-            const results = {};
-
-            // Menghasilkan data untuk setiap tipe sesi
-            for (let sessionType = 1; sessionType <= 7; sessionType++) {
-                const response = await generateSessionDataWithRetry(prompt, langCode, 'neutral', sessionType);
-                results[`session_${sessionType}`] = formatSessionData(response);
-            }
-
-            // Menyimpan hasil ke file JSON
-            fs.writeFileSync(filePath, JSON.stringify(results, null, 2));
-
-            console.log(`Results saved to ${filePath}`);
+        // Menghasilkan data untuk setiap tipe sesi
+        for (let sessionType = 1; sessionType <= 7; sessionType++) {
+            const response = await generateSessionDataWithRetry(prompt, langCode, 'neutral', sessionType);
+            results[`session_${sessionType}`] = formatSessionData(response);
         }
 
-        // Memformat dan menyimpan data ke database, kemudian menghapus file JSON
-        await formatAndSaveData(stringToSlug(prompt));
+        // Memformat dan menyimpan data ke database
+        await formatAndSaveData(results, prompt);
 
-        return new Response('Content generated, saved to database, and file deleted successfully.', { status: 200 });
+        return new Response('Content generated and saved to database successfully.', { status: 200 });
 
     } catch (error) {
         console.error('Error processing request:', error);

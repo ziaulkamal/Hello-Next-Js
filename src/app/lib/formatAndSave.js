@@ -1,8 +1,5 @@
-import fs from 'fs';
-import path from 'path';
 import supabase from '@/app/lib/supabaseClient';
 import { processImages } from './imageUtils';
-
 
 // Fungsi untuk menyimpan data ke Supabase
 async function saveToSupabase(result) {
@@ -26,14 +23,13 @@ async function saveToSupabase(result) {
     }
 }
 
-
 async function saveImageToSupabase(slug, data) {
     const { error } = await supabase
         .from('images_ai')
         .upsert([
             {
                 slug,
-                images_data : data,
+                images_data: data,
             }
         ]);
     if (error) {
@@ -44,47 +40,12 @@ async function saveImageToSupabase(slug, data) {
 
 // Fungsi untuk menghapus semua file JSON terkait
 function deleteAllRelatedFiles(inputFileName) {
-    const directory = path.join(process.cwd(), 'public', 'gemini_result');
-    
-    // Membaca daftar file dalam direktori
-    fs.readdir(directory, (err, files) => {
-        if (err) {
-            console.error('Error reading directory:', err);
-            return;
-        }
-
-        // Menghapus semua file yang cocok dengan pola inputFileName
-        files.forEach(file => {
-            if (file.startsWith(inputFileName) && file.endsWith('.json')) {
-                fs.unlink(path.join(directory, file), (err) => {
-                    if (err) {
-                        console.error('Error deleting file:', err);
-                    } else {
-                        console.log('Deleted file:', file);
-                    }
-                });
-            }
-        });
-    });
+    // Fungsi ini tidak diperlukan lagi jika kita tidak menggunakan file JSON
 }
 
-// Path file input dan output
-const getFilePaths = (inputFileName) => {
-    const inputFilePath = path.join(process.cwd(), 'public', 'gemini_result', `${inputFileName}.json`);
-    const outputFilePath = path.join(process.cwd(), 'public', 'gemini_result', `${inputFileName}_formatted.json`);
-    return { inputFilePath, outputFilePath };
-};
-
 // Fungsi untuk memformat dan menyimpan data
-export async function formatAndSaveData(inputFileName) {
-    const { inputFilePath, outputFilePath } = getFilePaths(inputFileName);
-
+export async function formatAndSaveData(results, prompt) {
     try {
-        // Membaca file JSON
-        const data = fs.readFileSync(inputFilePath, 'utf8');
-        const jsonData = JSON.parse(data);
-
-        // Membentuk objek hasil
         const result = {
             title: "",
             slug: "",
@@ -93,45 +54,37 @@ export async function formatAndSaveData(inputFileName) {
         };
 
         let combinedData = [];
+        let title = '';
+        let slug = '';
+        let keywords = '';
 
-        Object.keys(jsonData).forEach(key => {
-            const item = jsonData[key];
+        Object.keys(results).forEach(key => {
+            const item = results[key];
 
             if (item.title) {
-                result.title = item.title;
+                title = item.title;
             }
             if (item.slug) {
-                result.slug = item.slug;
+                slug = item.slug;
             }
             if (item.data) {
                 combinedData.push(item.data);
             }
             if (item.keywords) {
-                result.keywords = item.keywords.join(', '); // Menggabungkan array keywords menjadi string
+                keywords = item.keywords.join(', ');
             }
         });
 
-        // Gabungkan semua data menjadi satu string
-        if (combinedData.length > 0) {
-            result.data = combinedData.join(' ');
-        }
+        result.title = title;
+        result.slug = slug;
+        result.data = combinedData.join(' ');
+        result.keywords = keywords;
 
-        // Tulis hasil ke file output
-        fs.writeFileSync(outputFilePath, JSON.stringify(result, null, 2), 'utf8');
-        console.log(`File successfully processed and saved to ${outputFilePath}`);
+        await saveToSupabase(result);
+        const imageJson = await processImages(result.slug, 10);
+        await saveImageToSupabase(result.slug, imageJson);
 
-        // Simpan hasil ke Supabase
-            await saveToSupabase(result);
-            const imageJson = await processImages(result.slug, 10);
-            await saveImageToSupabase(result.slug, imageJson);
-
-            // Hapus semua file JSON terkait setelah data disimpan
-            deleteAllRelatedFiles(inputFileName);
-        // // Hapus file JSON setelah data disimpan
-        // fs.unlinkSync(inputFilePath);
-        // console.log(`File ${inputFilePath} successfully deleted.`);
-        
     } catch (error) {
-        console.error('Error processing file:', error);
+        console.error('Error processing data:', error);
     }
 }

@@ -4,10 +4,8 @@ import axios from 'axios';
 // Function to call the Gemini API
 async function callGeminiAPI(prompt) {
     try {
-        // Ambil token dan endpoint dari layanan token
         const { token, endpoint } = await getTokenAndUpdateHit();
 
-        // Define API key and endpoint
         const API_KEY = token;
         const API_URL = endpoint;
 
@@ -47,10 +45,7 @@ async function callGeminiAPI(prompt) {
             }
         );
 
-        // Debugging: Log the full response to understand its structure
         console.log('Full API Response:', JSON.stringify(response.data, null, 2));
-
-        // Return full response for further processing
         return response.data;
 
     } catch (error) {
@@ -132,7 +127,6 @@ function formatSessionData(response) {
         response.candidates[0].content.parts[0].text) {
 
         try {
-            // Clean the text to handle invalid characters
             const cleanedText = response.candidates[0].content.parts[0].text.replace(/[\x00-\x1F\x7F-\x9F]/g, '');
             return JSON.parse(cleanedText);
         } catch (error) {
