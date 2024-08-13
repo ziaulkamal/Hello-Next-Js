@@ -2,6 +2,7 @@
 
 import supabase from '@/app/lib/supabaseClient';
 import { decode } from 'html-entities'; // Import the decode function
+import axios from 'axios'; // Import axios
 
 export async function GET() {
   try {
@@ -33,17 +34,17 @@ export async function GET() {
     // Remove trailing spaces and dots
     title = title.replace(/[\s.]+$/, '');
 
-    // Construct the request to the /api/gemini endpoint
-    const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/gemini?prompt=${encodeURIComponent(title)}`, {
-      method: 'GET',
+    // Construct the request to the /api/gemini endpoint using axios
+    const response = await axios.get(`/api/gemini`, {
+      params: { prompt: title },
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      return new Response(JSON.stringify({ error: errorText }), { status: response.status });
+    // Axios response handling
+    if (response.status !== 200) {
+      return new Response(JSON.stringify({ error: response.statusText }), { status: response.status });
     }
 
-    const result = await response.json();
+    const result = response.data;
 
     // Update ai_process to true in Supabase
     const { error: updateError } = await supabase
