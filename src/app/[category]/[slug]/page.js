@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import BannerSection from '@/app/components/BannerSection'; // Sesuaikan path jika perlu
 import Articles from '@/app/components/Articles';
+import NotFoundPage from '@/app/not-found';
 
 async function getArticleData(category, slug) {
     const filePath = path.join(process.cwd(), 'src/app/data/articles.json');
@@ -31,7 +32,7 @@ export default async function ArticlePage({ params }) {
     const article = await getArticleData(category, slug);
 
     if (!article) {
-        return <div>Artikel tidak ditemukan.</div>;
+        return <NotFoundPage />;
     }
 
     return (
