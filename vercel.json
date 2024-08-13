@@ -8,6 +8,15 @@
           "value": "no-store"
         }
       ]
+    },
+    {
+      "source": "/api/saveTrendsData",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
     }
   ]
 }
