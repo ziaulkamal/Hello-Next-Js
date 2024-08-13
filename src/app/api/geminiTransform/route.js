@@ -58,6 +58,6 @@ export async function GET() {
     return new Response(JSON.stringify(result), { status: 200 });
   } catch (error) {
     console.error('Unexpected Error:', error);
-    return new Response(JSON.stringify({ error: 'An unexpected error occurred' }), { status: 500 });
+    return new Response(JSON.stringify({ error: `An unexpected error occurred ${error}` }), { status: 500 });
   }
 }
