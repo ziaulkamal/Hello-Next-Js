@@ -8,7 +8,7 @@ export async function GET(req) {
         // Mendapatkan URL dan parameter dari permintaan
         const url = new URL(req.url);
         const prompt = url.searchParams.get('prompt');
-        const lang = url.searchParams.get('lang');
+        const lang = url.searchParams.get('lang') || 'en';
 
         // Validasi parameter
         if (!prompt || !lang) {

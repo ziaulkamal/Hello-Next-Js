@@ -1,14 +1,16 @@
-// src/lib/gemini.js
-
-const axios = require('axios');
-
-// Define API key and endpoint
-const API_KEY = process.env.GEMINI_API_KEY; // Replace with your API key
-const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+import { getTokenAndUpdateHit } from '@/app/lib/geminTokenService';
+import axios from 'axios';
 
 // Function to call the Gemini API
 async function callGeminiAPI(prompt) {
     try {
+        // Ambil token dan endpoint dari layanan token
+        const { token, endpoint } = await getTokenAndUpdateHit();
+
+        // Define API key and endpoint
+        const API_KEY = token;
+        const API_URL = endpoint;
+
         const response = await axios.post(
             API_URL,
             {
@@ -58,7 +60,7 @@ async function callGeminiAPI(prompt) {
 }
 
 // Retry mechanism
-async function retryFunction(fn, retries = 3, delay = 5000) {
+async function retryFunction(fn, retries = 3, delay = 2000) {
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             return await fn();
@@ -85,19 +87,19 @@ async function generateSessionDataWithRetry(prompt, lang, tone, sessionType, ret
             sessionPrompt = `Create a JSON object with the following structure for an article about ${prompt}: { "title": "create new title, and use ${lang} ", "slug": "a-slug-for-the-title" }. only get object without include opening and say thats a json, long of title must be 140 character`;
             break;
         case 2:
-            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h1> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H1: Should clearly define the article’s main topic." }. only get object without include opening and say thats a json`;
+            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, Please ensure that the response does not include json\n at the start or at the end, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h1> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H1: Should clearly define the article’s main topic." }. only get object without include opening and say thats a json`;
             break;
         case 3:
-            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. Make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h2> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H2: Organize content into significant sections. and if there is a table or other HTML element, it must be attached as well" }. only get object without include opening and say thats a json`;
+            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, Please ensure that the response does not include json\n at the start or at the end, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. Make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h2> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H2: Organize content into significant sections. and if there is a table or other HTML element, it must be attached as well" }. only get object without include opening and say thats a json`;
             break;
         case 4:
-            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. Make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h3> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H3: Break down each H2 section into more detailed topics.. and if there is a table or other HTML element, it must be attached as well" }. only get object without include opening and say thats a json`;
+            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, Please ensure that the response does not include json\n at the start or at the end, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. Make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h3> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H3: Break down each H2 section into more detailed topics.. and if there is a table or other HTML element, it must be attached as well" }. only get object without include opening and say thats a json`;
             break;
         case 5:
-            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. Make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h4> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H4: Provide in-depth information within each H3 section. and if there is a table or other HTML element, it must be attached as well" }. only get object without include opening and say thats a json`;
+            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, Please ensure that the response does not include json\n at the start or at the end, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. Make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h4> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H4: Provide in-depth information within each H3 section. and if there is a table or other HTML element, it must be attached as well" }. only get object without include opening and say thats a json`;
             break;
         case 6:
-            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. Make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h5> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H5: Include specific details or examples relevant to H4. and if there is a table or other HTML element, it must be attached as well" }. only get object without include opening and say thats a json`;
+            sessionPrompt = `relate with before prompt, avoid using existing context, Create a comprehensive article into a JSON object, Please ensure that the response does not include json\n at the start or at the end, inside paragraph must include heading tag html formatted for an article about ${prompt} based on the title, lang formatted ${lang}, with tone writing ${tone}. Make sure data inside the right place, do not insert more attribute inside data object, The format should be: { "data": "html formatted with opening <h5> if it is a heading and each heading has 2 to 3 paragraphs, Each paragraph contains a 1000 words, H5: Include specific details or examples relevant to H4. and if there is a table or other HTML element, it must be attached as well" }. only get object without include opening and say thats a json`;
             break;
         case 7:
             sessionPrompt = `Create a JSON object with keywords related to the article on ${prompt}. The format should be: { "keywords": ["keyword1", "keyword2", "keyword3", ...] }. only get object without include opening and say thats a json`;
@@ -148,7 +150,7 @@ function stringToSlug(str) {
     return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-module.exports = {
+export {
     generateSessionDataWithRetry,
     formatSessionData,
     stringToSlug
