@@ -1,4 +1,6 @@
-import { scrapeImages } from '@/app/lib/googleImageScraper';
+// src/app/api/imageGenerator/route.js
+
+import { processImages } from '@/app/lib/imageUtils';
 
 export async function GET(req) {
     try {
@@ -9,16 +11,16 @@ export async function GET(req) {
 
         // Validasi parameter
         if (!query) {
-            return new Response('Missing query parameter', { status: 400 });
+            return new Response(JSON.stringify({ error: 'Missing query parameter' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
         }
 
-        // Mengambil gambar berdasarkan kueri pencarian
-        const imageUrls = await scrapeImages(query, limit);
+        // Mengunduh, menyimpan, dan memproses gambar
+        const formattedResults = await processImages(query, limit);
 
         // Mengembalikan hasil sebagai JSON
-        return new Response(JSON.stringify(imageUrls), { status: 200, headers: { 'Content-Type': 'application/json' } });
+        return new Response(JSON.stringify(formattedResults), { status: 200, headers: { 'Content-Type': 'application/json' } });
     } catch (error) {
         console.error('Error processing request:', error);
-        return new Response('Internal Server Error', { status: 500 });
+        return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
 }

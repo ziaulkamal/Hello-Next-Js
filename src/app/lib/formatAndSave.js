@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import supabase from '@/app/lib/supabaseClient';
+import { processImages } from './imageUtils';
 
 
 // Fungsi untuk menyimpan data ke Supabase
@@ -19,6 +20,22 @@ async function saveToSupabase(result) {
             }
         ]);
 
+    if (error) {
+        console.error('Error saving to Supabase:', error);
+        throw new Error('Error saving to Supabase');
+    }
+}
+
+
+async function saveImageToSupabase(slug, data) {
+    const { error } = await supabase
+        .from('images_ai')
+        .upsert([
+            {
+                slug,
+                images_data : data,
+            }
+        ]);
     if (error) {
         console.error('Error saving to Supabase:', error);
         throw new Error('Error saving to Supabase');
@@ -105,6 +122,8 @@ export async function formatAndSaveData(inputFileName) {
 
         // Simpan hasil ke Supabase
             await saveToSupabase(result);
+            const imageJson = await processImages(result.slug, 10);
+            await saveImageToSupabase(result.slug, imageJson);
 
             // Hapus semua file JSON terkait setelah data disimpan
             deleteAllRelatedFiles(inputFileName);

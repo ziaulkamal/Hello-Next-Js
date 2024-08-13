@@ -16,7 +16,7 @@
 package-lock.json
 # production
 /build
-
+/public/images/imagen/*
 # misc
 .DS_Store
 *.pem

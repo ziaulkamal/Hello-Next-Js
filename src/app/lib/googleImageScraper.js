@@ -18,7 +18,7 @@ export async function scrapeImages(query, limit = 10) {
             custom: "landscape",
             // domains: ["pinterest.com"],
             query: {
-                EXTENSION: GOOGLE_QUERY.EXTENSION.SVG,
+                EXTENSION: GOOGLE_QUERY.EXTENSION.JPG,
                 SIZE:GOOGLE_QUERY.SIZE.LARGE
 
             },
