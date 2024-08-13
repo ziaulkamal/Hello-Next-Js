@@ -41,10 +41,10 @@ export async function GET() {
             rss: [
                 { _attr: { version: '2.0' } },
                 { channel: [
-                    { title: 'Your Site Title' },
+                    { title: 'Mindkreativ - Solusi Mitra Digital Anda' },
                     { link: process.env.NEXT_PUBLIC_API_URL },
-                    { description: 'A brief description of your site, including relevant keywords.' },
-                    { language: 'en-us' },
+                    { description: 'Mau buat aplikasi atau cari jasa kelola sosmed hingga scaleup brand ? Ya mindkreativ solusi nya!' },
+                    { language: 'en_id' },
                     { lastBuildDate: new Date().toUTCString() },
                     { pubDate: new Date().toUTCString() },
                     { ttl: '60' },
@@ -69,9 +69,9 @@ export async function GET() {
             rss: [
                 { _attr: { version: '2.0' } },
                 { channel: [
-                    { title: process.env.SITE_TITLE },
+                    { title: 'Mindkreativ - Solusi Mitra Digital Anda' },
                     { link: process.env.NEXT_PUBLIC_API_URL },
-                    { description: process.env.SITE_DESCRIPTION },
+                    { description:'Mau buat aplikasi atau cari jasa kelola sosmed hingga scaleup brand ? Ya mindkreativ solusi nya!' },
                     { language: 'en_id' },
                     { lastBuildDate: new Date().toUTCString() },
                     { pubDate: new Date().toUTCString() },
