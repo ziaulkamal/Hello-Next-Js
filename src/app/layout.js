@@ -18,8 +18,8 @@ import Heads from './components/Heads';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata = {
-  title: 'Mindkreativ - Solusi Mitra Digital Anda',
-  description: 'Mau buat aplikasi atau cari jasa kelola sosmed hingga scaleup brand ? Ya mindkreativ solusi nya!',
+  title: `${process.env.SITE_TITLE} - ${process.env.SITE_SLOGAN}`,
+  description: process.env.SITE_DESCRIPTION,
   charset: 'utf-8',
   keywords: 'Mindkreativ, Startup, Pembuatan Aplikasi Berkualitas, Mind Kreativ',
   author: 'Ziadev',
