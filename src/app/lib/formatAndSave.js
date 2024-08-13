@@ -81,7 +81,7 @@ export async function formatAndSaveData(results, prompt) {
         result.keywords = keywords;
 
         await saveToSupabase(result);
-        const imageJson = await processImages(result.slug, 10);
+        const imageJson = await processImages(result.slug, 20);
         await saveImageToSupabase(result.slug, imageJson);
 
     } catch (error) {
