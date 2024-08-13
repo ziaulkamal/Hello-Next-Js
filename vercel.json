@@ -17,6 +17,33 @@
           "value": "no-store"
         }
       ]
+    },
+    {
+      "source": "/api/sitemap_index",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/api/rss",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/api/sendTelegramNotification",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
     }
   ]
 }
