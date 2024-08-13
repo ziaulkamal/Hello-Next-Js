@@ -35,7 +35,7 @@ export async function GET() {
     title = title.replace(/[\s.]+$/, '');
 
     // Construct the request to the /api/gemini endpoint using axios
-    const response = await axios.get(`/api/gemini`, {
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/gemini`, {
       params: { prompt: title },
     });
 
