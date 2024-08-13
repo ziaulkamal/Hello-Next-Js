@@ -1,4 +1,4 @@
-// app/api/geminiTransform/route.js
+// src/app/api/geminiTransform/route.js
 
 import supabase from '@/app/lib/supabaseClient';
 import { decode } from 'html-entities'; // Import the decode function
@@ -13,11 +13,25 @@ export async function GET() {
       .eq('ai_process', false);
 
     if (error) {
-      return new Response(JSON.stringify({ error: error.message }), { status: 400 });
+      return new Response(JSON.stringify({ error: error.message }), {
+        status: 400,
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        }
+      });
     }
 
     if (!data || data.length === 0) {
-      return new Response(JSON.stringify({ message: 'No data found' }), { status: 404 });
+      return new Response(JSON.stringify({ message: 'No data found' }), {
+        status: 404,
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        }
+      });
     }
 
     // Select a random row from the data
@@ -41,7 +55,14 @@ export async function GET() {
 
     // Axios response handling
     if (response.status !== 200) {
-      return new Response(JSON.stringify({ error: response.statusText }), { status: response.status });
+      return new Response(JSON.stringify({ error: response.statusText }), {
+        status: response.status,
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        }
+      });
     }
 
     const result = response.data;
@@ -53,12 +74,33 @@ export async function GET() {
       .eq('id', row.id);
 
     if (updateError) {
-      return new Response(JSON.stringify({ error: updateError.message }), { status: 500 });
+      return new Response(JSON.stringify({ error: updateError.message }), {
+        status: 500,
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        }
+      });
     }
 
-    return new Response(JSON.stringify(result), { status: 200 });
+    return new Response(JSON.stringify(result), {
+      status: 200,
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0',
+      }
+    });
   } catch (error) {
     console.error('Unexpected Error:', error);
-    return new Response(JSON.stringify({ error: `An unexpected error occurred ${error}` }), { status: 500 });
+    return new Response(JSON.stringify({ error: `An unexpected error occurred ${error}` }), {
+      status: 500,
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0',
+      }
+    });
   }
 }
