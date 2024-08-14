@@ -2,6 +2,15 @@ import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
+  async rewrites() {
+      return [
+          {
+              source: '/sitemap.xml',
+              destination: '/api/sitemap_index', // Endpoint API untuk sitemap
+          },
+      ];
+  },
   experimental: {
     nextScriptWorkers: true,
   },

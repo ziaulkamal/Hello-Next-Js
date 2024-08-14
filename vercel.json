@@ -19,24 +19,6 @@
       ]
     },
     {
-      "source": "/api/sitemap_index",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store"
-        }
-      ]
-    },
-    {
-      "source": "/api/rss",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store"
-        }
-      ]
-    },
-    {
       "source": "/api/gemini",
       "headers": [
         {

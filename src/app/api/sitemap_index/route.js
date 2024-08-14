@@ -1,30 +1,28 @@
 import xml from 'xml';
-import supabase from '@/app/lib/supabaseClient'; // Sesuaikan path jika perlu
 
-/**
- * Mengambil data artikel dan menghasilkan sitemap XML.
- * @returns {Response} - Objek Response dengan konten XML.
- */
 export async function GET(request) {
-    const url = new URL(request.url);
-    const timeStamp = url.searchParams.get('timestamp');
-
     try {
-        // Ambil data artikel dari tabel 'articles_ai'
-        const { data: articles, error: articlesError } = await supabase
-            .from('articles_ai')
-            .select('title, slug, created_at');
+        // Ambil parameter timestamp dari query string jika ada
+        const url = new URL(request.url);
+        const timestamp = url.searchParams.get('timestamp');
 
-        if (articlesError) {
-            console.error(`Error fetching articles: ${articlesError.message}`);
-            throw articlesError;
+        // Ambil data artikel dari API eksternal
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/database/articles?timestamp=${timestamp}`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        const articles = await response.json();
 
-        // Format URL artikel
-        const articleUrls = articles.map(article => ({
+        // Base URL dari environment variable
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+
+        // Format data artikel menjadi sitemap XML
+        const sitemapIndex = articles.map(article => ({
             url: [
-                { loc: `${process.env.NEXT_PUBLIC_API_URL}/articles/${article.slug}` },
-                { lastmod: new Date(article.created_at).toISOString() }
+                { loc: `${baseUrl}/articles/${article.slug}` },
+                { lastmod: new Date(article.created_at).toISOString() },
+                { changefreq: 'weekly' },
+                { priority: 0.7 }
             ]
         }));
 
@@ -32,14 +30,13 @@ export async function GET(request) {
         const sitemapFeed = {
             urlset: [
                 { _attr: { version: '1.0', xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9' } },
-                ...articleUrls
+                ...sitemapIndex
             ]
         };
 
-        // Menghasilkan sitemap XML dalam format XML
+        // Menghasilkan sitemap XML
         const xmlFeed = xml(sitemapFeed, { declaration: true });
 
-        // Mengembalikan Response dengan konten XML
         return new Response(xmlFeed, {
             headers: {
                 'Content-Type': 'application/xml',
@@ -48,7 +45,7 @@ export async function GET(request) {
     } catch (error) {
         console.error('Error generating sitemap:', error);
 
-        // Kembalikan sitemap kosong jika terjadi kesalahan
+        // Jika terjadi kesalahan, berikan sitemap kosong dengan header yang sesuai
         const sitemapFeed = {
             urlset: [
                 { _attr: { version: '1.0', xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9' } },
@@ -56,7 +53,6 @@ export async function GET(request) {
         };
         const xmlFeed = xml(sitemapFeed, { declaration: true });
 
-        // Mengembalikan Response dengan konten XML meskipun terjadi kesalahan
         return new Response(xmlFeed, {
             headers: {
                 'Content-Type': 'application/xml',
