@@ -36,8 +36,8 @@
     "copyright": {
       "text": "Copyright © 2024 Mindkreativ",
       "links": [
-        { "text": "Terms of Use", "link": "#!" },
-        { "text": "Privacy Policy", "link": "#!" }
+        { "text": "RSS", "link": "/sitemap" },
+        { "text": "Sitemap", "link": "/rss" }
       ]
     }
   },
