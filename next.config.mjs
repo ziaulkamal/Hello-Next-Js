@@ -16,21 +16,7 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'styles')],
-  },
-  async redirects() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/api/sitemap_index', // Pastikan ini sesuai dengan route API untuk sitemap.xml
-        permanent: true, // Redirect permanen (301)
-      },
-      {
-        source: '/sitemap.rss',
-        destination: '/api/rss', // Pastikan ini sesuai dengan route API untuk sitemap.rss
-        permanent: true, // Redirect permanen (301)
-      },
-    ];
-  },
+  }
 };
 
 export default nextConfig;

@@ -5,7 +5,10 @@ import supabase from '@/app/lib/supabaseClient'; // Sesuaikan path jika perlu
  * Mengambil data artikel dan menghasilkan sitemap XML.
  * @returns {Response} - Objek Response dengan konten XML.
  */
-export async function GET() {
+export async function GET(request) {
+    const url = new URL(request.url);
+    const timeStamp = url.searchParams.get('timestamp');
+
     try {
         // Ambil data artikel dari tabel 'articles_ai'
         const { data: articles, error: articlesError } = await supabase

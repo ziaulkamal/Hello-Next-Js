@@ -13,12 +13,17 @@ function cleanAndTruncateHtml(html, maxLength = 300) {
  * Mengambil data artikel dari Supabase dan menghasilkan RSS feed.
  * @returns {Response} - Objek Response dengan konten RSS.
  */
-export async function GET() {
+export async function GET(request) {
+    const url = new URL(request.url);
+    const timeStamp = url.searchParams.get('timestamp');
     try {
         // Mengambil data artikel dari tabel 'articles_ai'
-        const { data: articles, error } = await supabase
-            .from('articles_ai')
-            .select('title, slug, data, keywords');
+      const { data: articles, error } = await supabase
+        .from('articles_ai')
+        .select('title, slug, data, keywords')
+        .limit(20) // Batasi hasil hingga 20 data teratas
+        .order('id', { ascending: false }); // Mengurutkan data berdasarkan kolom 'id' jika perlu
+
 
         if (error) {
             console.error(`Error fetching articles: ${error.message}`);
