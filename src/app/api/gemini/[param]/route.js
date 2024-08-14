@@ -9,7 +9,7 @@ export async function GET(req) {
     const url = new URL(req.url);
     const param = url.pathname.split('/').pop(); // Ambil parameter dinamis dari URL
     const prompt = decodeURIComponent(param); // Dekode parameter jika diperlukan
-
+    const timeStamp = url.searchParams.get('timestamp');
     if (!prompt) {
       return NextResponse.json(
         { error: 'Missing prompt parameter' },

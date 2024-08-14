@@ -5,6 +5,8 @@ import { decode } from 'html-entities';
 import axios from 'axios';
 
 export async function GET() {
+  const timeStamp = Math.floor(Date.now() / 1000);
+
   try {
     // Fetch all rows from the 'googletrend' table where ai_process is false
     const { data, error } = await supabase
@@ -49,7 +51,7 @@ export async function GET() {
     title = title.replace(/[\s.]+$/, '');
 
     // Construct the request to the dynamic route /api/gemini/[param] using axios
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/gemini/${encodeURIComponent(title)}`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/gemini/${encodeURIComponent(title)}?timestamp=${timeStamp}`);
 
     if (response.status !== 200) {
       return new Response(JSON.stringify({ error: response.statusText }), {

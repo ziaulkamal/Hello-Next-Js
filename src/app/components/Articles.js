@@ -170,7 +170,7 @@ const Articles = ({ title, date, author, content, slug, thumbnail, keywords, cat
                             </content>
                             <div className="keywords"><strong>Keywords : </strong><span>{keywords}</span></div>
                             <SocialAuthor />
-                            <div className="other_posts_nav">
+                            {/* <div className="other_posts_nav">
                                 <a href="#!">
                                     <i className="fa-regular fa-arrow-left-long"/>
                                     <span>
@@ -188,7 +188,7 @@ const Articles = ({ title, date, author, content, slug, thumbnail, keywords, cat
                                     </span>
                                     <i className="fa-regular fa-arrow-right-long"/>
                                 </a>
-                            </div>
+                            </div> */}
                             {/* <CommentArea /> */}
                         </div>
                         <WidgetArea />
