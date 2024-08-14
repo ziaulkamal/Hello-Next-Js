@@ -4,10 +4,9 @@ export async function GET(request) {
     try {
         // Ambil parameter timestamp dari query string jika ada
         const url = new URL(request.url);
-        const timestamp = url.searchParams.get('timestamp');
-
+        const timeStamp = Math.floor(Date.now() / 1000);
         // Ambil data artikel dari API eksternal
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/database/articles?timestamp=${timestamp}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/database/articles?timestamp=${timeStamp}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -21,8 +20,8 @@ export async function GET(request) {
             url: [
                 { loc: `${baseUrl}/articles/${article.slug}` },
                 { lastmod: new Date(article.created_at).toISOString() },
-                { changefreq: 'weekly' },
-                { priority: 0.7 }
+                { changefreq: 'daily' },
+                { priority: 0.1 }
             ]
         }));
 
