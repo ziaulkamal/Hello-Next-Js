@@ -7,3 +7,5 @@ Disallow: /js
 Allow: *
 Allow: /api/og/*
 
+Sitemap: https://mindkreativ.com/sitemap.xml
+
