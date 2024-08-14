@@ -21,7 +21,7 @@ export async function GET(request) {
                 { loc: `${baseUrl}/articles/${article.slug}` },
                 { lastmod: new Date(article.created_at).toISOString() },
                 { changefreq: 'daily' },
-                { priority: 0.1 }
+                { priority: 0.8 }
             ]
         }));
 
