@@ -68,7 +68,7 @@ const geoOptions = [
   { label: 'San Marino', value: 'SM' },
   { label: 'Vatican City', value: 'VA' },
 ];
-
+const timeStamp = Math.floor(Date.now() / 1000);
 
 const TrendPage = () => {
   const [trendingSearches, setTrendingSearches] = useState([]);
@@ -83,7 +83,7 @@ const TrendPage = () => {
   const fetchData = async (geo) => {
     try {
       setLoading(true);
-      const response = await axios.get(`/api/daily-trends?geo=${geo}`);
+      const response = await axios.get(`/api/daily-trends?geo=${geo}&timestamp=${timeStamp}`);
       const searches = response.data.default.trendingSearchesDays.flatMap(day => day.trendingSearches);
       setTrendingSearches(searches);
       const allArticles = searches.flatMap(search => search.articles || []);
@@ -123,9 +123,10 @@ const TrendPage = () => {
   }, [articles]);
 
   const handleBadgeClick = async (query) => {
+    
     try {
       setLoading(true);
-      const response = await axios.get(`/api/daily-trends?q=${encodeURIComponent(query)}&geo=${selectedGeo}`);
+      const response = await axios.get(`/api/daily-trends?q=${encodeURIComponent(query)}&geo=${selectedGeo}&timestamp=${timeStamp}`);
       const newTrendingSearches = response.data.default.trendingSearchesDays.flatMap(day => day.trendingSearches);
       setTrendingSearches(newTrendingSearches);
       const newArticles = newTrendingSearches.flatMap(search => search.articles || []);
