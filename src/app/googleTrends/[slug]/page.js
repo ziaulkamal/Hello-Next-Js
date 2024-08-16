@@ -17,21 +17,39 @@ async function fetchArticleData(slug) {
     }
 }
 
-// Fungsi untuk mengubah string menjadi title case
-function toTitleCase(str) {
-    if (!str) return ''; // Periksa jika str adalah undefined atau null
-    return str
-        .toLowerCase()
-        .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
-}
 
-// Fungsi untuk mengubah string menjadi sentence case
-function toSentenceCase(str) {
-    if (!str) return ''; // Periksa jika str adalah undefined atau null
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-}
+    // Fungsi untuk mengubah string menjadi title case
+    function toTitleCase(str) {
+        if (!str) return ''; // Periksa jika str adalah undefined atau null
+        return str
+            .toLowerCase()
+            .split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+    }
+
+    // Fungsi untuk mengubah string menjadi sentence case
+    function toSentenceCase(str) {
+        if (!str) return ''; // Periksa jika str adalah undefined atau null
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    const cleanAndTruncateContent = (htmlString, maxLength = 140) => {
+        // Menghapus tag HTML dengan regex
+        const removeHtmlTags = (str) => str.replace(/<\/?[^>]+(>|$)/g, "");
+
+        // Menghapus tag HTML
+        const textOnly = removeHtmlTags(htmlString);
+
+        // Mengambil hingga 140 karakter
+        const truncateText = (text, length) => {
+            if (text.length <= length) return text;
+            return text.slice(0, length) + '...'; // Menambahkan elipsis jika teks lebih panjang dari panjang maksimum
+        };
+
+        return truncateText(textOnly, maxLength);
+    };
+
 
 export default async function ArticlePage({ params }) {
     const { slug } = params;
@@ -49,6 +67,19 @@ export default async function ArticlePage({ params }) {
 
     return (
         <>
+        <title>{title}</title>
+        <meta name="keyword" content={keyword} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={cleanAndTruncateContent(content)} />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_API_URL}/${slug}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Mindkreativ" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={cleanAndTruncateContent(content)} />
+        <meta name="twitter:url" content={`${process.env.NEXT_PUBLIC_API_URL}/${slug}`} />
+
             <BannerSection 
                 section={toSentenceCase('articles')} 
                 title={toTitleCase(title)} 

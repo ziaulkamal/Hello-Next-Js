@@ -18,10 +18,6 @@ import Heads from './components/Heads';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata = {
-  title: 'Mindkreativ - Solusi Mitra Digital Anda',
-  description: 'Mau buat aplikasi atau cari jasa kelola sosmed hingga scaleup brand ? Ya mindkreativ solusi nya!',
-  charset: 'utf-8',
-  keywords: 'Mindkreativ, Startup, Pembuatan Aplikasi Berkualitas, Mind Kreativ',
   author: 'Ziadev',
   generator: 'medium',
   robots: 'follow, index, max-snippet:large, max-video-preview:large, max-image-preview:large',

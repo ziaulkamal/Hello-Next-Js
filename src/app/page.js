@@ -8,6 +8,13 @@ import ServiceSection from './components/ServiceSection';
 import PartnerSection from './components/PartnerSection';
 import HeroSection from './components/HeroSection';
 
+export const metadata = {
+  title: 'Mindkreativ - Solusi Mitra Digital Anda',
+  description: 'Mau buat aplikasi atau cari jasa kelola sosmed hingga scaleup brand ? Ya mindkreativ solusi nya!',
+  charset: 'utf-8',
+  keywords: 'Mindkreativ, Startup, Pembuatan Aplikasi Berkualitas, Mind Kreativ'
+}
+
 export default function Home() {
   
   return (

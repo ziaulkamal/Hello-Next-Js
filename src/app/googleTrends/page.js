@@ -22,6 +22,7 @@ const getRandomImageUrl = (imagesData) => {
     return filteredImages[randomIndex].url;
 };
 
+
 const GoogleTrends = () => {
     const [articles, setArticles] = useState([]);
     const [displayedArticles, setDisplayedArticles] = useState([]);
@@ -91,6 +92,7 @@ const GoogleTrends = () => {
 
     return (
         <>
+        <title>Google Trends - Related Article</title>
             <BannerSection 
                 section={'articles'} 
                 title={'Related Articles'} 
