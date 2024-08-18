@@ -1,11 +1,58 @@
 # Allow all bots to crawl the entire site
 User-agent: *
-Disallow: /css
-Disallow: /fonts
-Disallow: /images
-Disallow: /js
 Allow: *
-Allow: /api/og/*
+
+User-agent: Caliperbot/1.0
+Disallow: /
+
+User-agent: SearchmetricsBot
+Disallow: /
+
+User-agent: Covario-IDS/1.0
+Disallow: /
+
+User-agent: 008
+Disallow: /
+
+User-agent: Sosospider
+Disallow: /
+
+User-agent: XoviBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ImagesiftBot 
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+Host: https://mindkreativ.com
 
 Sitemap: https://mindkreativ.com/sitemap.xml
 
